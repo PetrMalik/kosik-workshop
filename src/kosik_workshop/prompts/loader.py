@@ -26,9 +26,7 @@ def _resolve_identifier() -> str:
     env = os.getenv("ENVIRONMENT", "development").strip().lower()
     tag = _ENV_TO_TAG.get(env)
     if tag is None:
-        raise ValueError(
-            f"Unknown ENVIRONMENT={env!r}. Expected one of: {sorted(_ENV_TO_TAG)}."
-        )
+        raise ValueError(f"Unknown ENVIRONMENT={env!r}. Expected one of: {sorted(_ENV_TO_TAG)}.")
     return f"{PROMPT_NAME}:{tag}"
 
 

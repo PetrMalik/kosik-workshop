@@ -13,8 +13,8 @@ from __future__ import annotations
 
 import time
 import uuid
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Iterable
 
 from langchain_core.messages import HumanMessage
 from langchain_core.tracers.run_collector import RunCollectorCallbackHandler
@@ -22,7 +22,7 @@ from langsmith import Client
 
 from kosik_workshop.agent import build_agent
 from kosik_workshop.simulation.demo_queries import DEMO_QUERIES, DemoQuery
-from kosik_workshop.simulation.demo_users import DEMO_USERS, by_id
+from kosik_workshop.simulation.demo_users import by_id
 
 
 @dataclass
@@ -80,9 +80,7 @@ def _select_queries(scenario: str) -> list[DemoQuery]:
     if scenario == "recovery":
         # 10 queries spread across intents — lighter traffic shape for demo.
         return [
-            q
-            for i, q in enumerate(DEMO_QUERIES)
-            if i in (0, 4, 10, 12, 16, 18, 22, 25, 27, 29)
+            q for i, q in enumerate(DEMO_QUERIES) if i in (0, 4, 10, 12, 16, 18, 22, 25, 27, 29)
         ]
     return list(DEMO_QUERIES)
 

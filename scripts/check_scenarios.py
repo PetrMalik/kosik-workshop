@@ -10,7 +10,7 @@ from __future__ import annotations
 import argparse
 import os
 from collections import defaultdict
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from langsmith import Client
 
@@ -32,7 +32,7 @@ def main() -> int:
 
     project = os.getenv("LANGSMITH_PROJECT", "kosik-workshop")
     client = Client()
-    since = datetime.now(timezone.utc) - timedelta(hours=args.hours)
+    since = datetime.now(UTC) - timedelta(hours=args.hours)
 
     print(f"\nProject: {project}")
     print(f"Window:  last {args.hours}h (since {since.isoformat()})\n")
@@ -68,7 +68,7 @@ def main() -> int:
             scores = scores_by_key.get(key, [])
             if scores:
                 row[key] = (
-                    f"n={len(scores):2d} mean={sum(scores)/len(scores):.2f} "
+                    f"n={len(scores):2d} mean={sum(scores) / len(scores):.2f} "
                     f"ones={int(sum(scores))}/{len(scores)}"
                 )
             else:
@@ -76,7 +76,11 @@ def main() -> int:
         rows.append(row)
 
     # Print table.
-    print(f"{'scenario':<12} {'runs':>5}  {'hallucination (1=BAD)':<32}  {'heuristic_quality (1=GOOD)':<32}")
+    header = (
+        f"{'scenario':<12} {'runs':>5}  "
+        f"{'hallucination (1=BAD)':<32}  {'heuristic_quality (1=GOOD)':<32}"
+    )
+    print(header)
     print("-" * 90)
     for row in rows:
         print(
@@ -93,11 +97,17 @@ def main() -> int:
     for scenario in SCENARIOS:
         n_runs = len(per_scenario_runs[scenario])
         for key in FEEDBACK_KEYS:
-            scored = sum(
-                1
-                for fb in client.list_feedback(run_ids=[r.id for r in per_scenario_runs[scenario]])
-                if fb.key == key and fb.score is not None
-            ) if n_runs else 0
+            scored = (
+                sum(
+                    1
+                    for fb in client.list_feedback(
+                        run_ids=[r.id for r in per_scenario_runs[scenario]]
+                    )
+                    if fb.key == key and fb.score is not None
+                )
+                if n_runs
+                else 0
+            )
             if n_runs and scored < n_runs and key == "hallucination":
                 missing = n_runs - scored
                 print(

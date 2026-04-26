@@ -66,7 +66,7 @@ def main() -> int:
     for tid in result.sample_thread_ids:
         print(f"  - {tid}")
 
-    print(f"\nLangSmith filter for this scenario:")
+    print("\nLangSmith filter for this scenario:")
     print(f"  Tags filter: scenario:{args.scenario}")
     print(f"  Or open:     {_langsmith_url(args.scenario)}")
     return 0

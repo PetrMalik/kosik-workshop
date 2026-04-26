@@ -11,7 +11,8 @@ default evaluators, and a sensible experiment prefix.
 from __future__ import annotations
 
 import uuid
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 from langchain_core.messages import HumanMessage
 from langsmith.evaluation import evaluate
@@ -74,17 +75,27 @@ def run_evaluation(
     experiment_prefix: str = "kosik-eval",
     evaluators: list[Callable[..., Any]] | None = None,
     max_concurrency: int = 1,
+    metadata: dict[str, Any] | None = None,
+    description: str | None = None,
 ) -> Any:
     """Run the golden eval against `agent` and return the experiment results.
 
     `max_concurrency` defaults to 1 because the Chroma client backing
     `search_products` is not thread-safe with the default in-process settings.
     Bump it after switching to a server-backed vector store.
+
+    `metadata` and `description` are passed through to LangSmith and shown in
+    the Experiments UI — useful for A/B testing where you want to mark related
+    experiments (e.g. `metadata={"ab_group": "citations-test", "variant": "v2"}`).
     """
-    return evaluate(
-        build_target(agent),
-        data=dataset_name,
-        evaluators=evaluators or DEFAULT_EVALUATORS,
-        experiment_prefix=experiment_prefix,
-        max_concurrency=max_concurrency,
-    )
+    kwargs: dict[str, Any] = {
+        "data": dataset_name,
+        "evaluators": evaluators or DEFAULT_EVALUATORS,
+        "experiment_prefix": experiment_prefix,
+        "max_concurrency": max_concurrency,
+    }
+    if metadata is not None:
+        kwargs["metadata"] = metadata
+    if description is not None:
+        kwargs["description"] = description
+    return evaluate(build_target(agent), **kwargs)

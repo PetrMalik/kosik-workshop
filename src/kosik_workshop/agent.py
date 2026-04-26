@@ -41,6 +41,7 @@ def build_agent(
     model: str = "gpt-4o-mini",
     temperature: float = 0.0,
     checkpointer: BaseCheckpointSaver | None = None,
+    system_text: str | None = None,
 ):
     """Build a LangGraph ReAct agent with the prompt pulled from LangSmith Hub.
 
@@ -52,12 +53,13 @@ def build_agent(
     same `thread_id` accumulate conversation state. Pass a different checkpointer
     (e.g. `SqliteSaver`) for persistence beyond the process lifetime.
     """
-    prompt = load_kosik_prompt()
-    system_text = next(
-        msg.prompt.template
-        for msg in prompt.messages
-        if getattr(msg, "prompt", None) and getattr(msg.prompt, "template", None)
-    )
+    if system_text is None:
+        prompt = load_kosik_prompt()
+        system_text = next(
+            msg.prompt.template
+            for msg in prompt.messages
+            if getattr(msg, "prompt", None) and getattr(msg.prompt, "template", None)
+        )
     system_message = SystemMessage(content=system_text)
     llm = ChatOpenAI(model=model, temperature=temperature).bind_tools(ALL_TOOLS)
 

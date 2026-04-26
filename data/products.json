@@ -1,0 +1,2254 @@
+[
+  {
+    "id": "algida-ovocna-zmrzlina-500-ml",
+    "name": "Algida Ovocná zmrzlina 500 ml",
+    "category": "Mražené potraviny",
+    "subcategory": "Zmrzliny",
+    "price_czk": 139.0,
+    "unit": "ml",
+    "description": "Ovocná zmrzlina Algida z přírodních surovin je osvěžující volba pro léto. Skvělá chuť jahod, malin a dalších plodů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "Algida"
+  },
+  {
+    "id": "algida-vanilkova-zmrzlina-500-ml",
+    "name": "Algida Vanilková zmrzlina 500 ml",
+    "category": "Mražené potraviny",
+    "subcategory": "Zmrzliny",
+    "price_czk": 119.0,
+    "unit": "ml",
+    "description": "Vanilková zmrzlina Algida je krémová a osvěžující, ideální jako dezert nebo svačina. Obsahuje kvalitní suroviny a je bez umělých barviv.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "Algida"
+  },
+  {
+    "id": "ardo-mrazena-karotka-500-g",
+    "name": "Ardo Mražená karotka 500 g",
+    "category": "Mražené potraviny",
+    "subcategory": "Zelenina mražená",
+    "price_czk": 65.0,
+    "unit": "g",
+    "description": "Mražená karotka Ardo je bohatá na vitamín A a minerály, vhodná do polévek, omáček nebo jako příloha k hlavnímu jídlu.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Ardo"
+  },
+  {
+    "id": "ardo-mrazene-zeleninove-smesi-1-kg",
+    "name": "Ardo Mražené zeleninové směsi 1 kg",
+    "category": "Mražené potraviny",
+    "subcategory": "Zelenina mražená",
+    "price_czk": 89.0,
+    "unit": "kg",
+    "description": "Mražená zeleninová směs Ardo je praktická na přípravu různých pokrmů, ideální do polévek, omáček nebo jako příloha.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Ardo"
+  },
+  {
+    "id": "ardo-mrazeny-hrasek-450-g",
+    "name": "Ardo Mražený hrášek 450 g",
+    "category": "Mražené potraviny",
+    "subcategory": "Zelenina mražená",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Mražený hrášek Ardo je ideální pro rychlou přípravu pokrmů. Obsahuje přírodní cukry a je bohatý na vlákninu.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Ardo"
+  },
+  {
+    "id": "ariel-gel-na-prani-1-2-l",
+    "name": "Ariel Gel na praní 1,2 l",
+    "category": "Drogerie",
+    "subcategory": "Prací prostředky",
+    "price_czk": 249.0,
+    "unit": "l",
+    "description": "Ariel gel na praní pro intenzivní čistotu. Vhodné pro bílé a barevné prádlo. Vyrobeno v Francii.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Francie",
+    "in_stock": true,
+    "brand": "Ariel"
+  },
+  {
+    "id": "ariel-praci-prasek-2-5-kg",
+    "name": "Ariel Prací prášek 2,5 kg",
+    "category": "Drogerie",
+    "subcategory": "Prací prostředky",
+    "price_czk": 399.0,
+    "unit": "kg",
+    "description": "Ariel prášek pro dokonalou čistotu a svěžest prádla. Ideální pro všechny typy praček. Vyrobeno ve Francii.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Francie",
+    "in_stock": true,
+    "brand": "Ariel"
+  },
+  {
+    "id": "baguette-francouzske-pecivo-300-g",
+    "name": "Baguette Francouzské pečivo 300 g",
+    "category": "Pečivo",
+    "subcategory": "Bagety",
+    "price_czk": 49.0,
+    "unit": "g",
+    "description": "Klasická francouzská bageta s křupavou kůrkou, ideální na sendviče. Složení: pšeničná mouka, voda, sůl, droždí. Země původu: Francie.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Francie",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "banany-1-kg",
+    "name": "Banány 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Ovoce",
+    "price_czk": 49.0,
+    "unit": "kg",
+    "description": "Měkké a sladké banány, bohaté na draslík, ideální na svačinu nebo do smoothies. Pochází z Jižní Ameriky.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Ekvádor",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "barilla-spaghetti-500-g",
+    "name": "Barilla Spaghetti 500 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Těstoviny",
+    "price_czk": 49.0,
+    "unit": "g",
+    "description": "Italské těstoviny Spaghetti od značky Barilla, vyrobené z kvalitní durum pšenice. Ideální k omáčkám nebo jako příloha.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "Barilla"
+  },
+  {
+    "id": "barilla-testoviny-penne-500-g",
+    "name": "Barilla Těstoviny penne 500 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Těstoviny",
+    "price_czk": 35.0,
+    "unit": "g",
+    "description": "Kvalitní italské těstoviny penne od značky Barilla, ideální pro přípravu různých omáček.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "Barilla"
+  },
+  {
+    "id": "bazalka-cerstva-30-g",
+    "name": "Bazalka čerstvá 30 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Bylinky",
+    "price_czk": 29.0,
+    "unit": "balení",
+    "description": "Čerstvá bazalka, skvělá na dochucení pokrmů, zejména italské kuchyně. Pochází z Itálie.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "becherovka-0-5-l",
+    "name": "Becherovka 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Lihoviny",
+    "price_czk": 450.0,
+    "unit": "l",
+    "description": "Tradiční český bylinný likér s unikátní chutí, ideální jako digestiv. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Becherovka"
+  },
+  {
+    "id": "bohemia-chips-paprika-150-g",
+    "name": "Bohemia Chips Paprika 150 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Chipsy",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Křupavé bramborové chipsy s výraznou paprikovou chutí. Skvělé jako snack na večerní film.",
+    "allergens": [
+      "sója"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Bohemia Chips"
+  },
+  {
+    "id": "bohemia-chips-solene-150-g",
+    "name": "Bohemia Chips Solené 150 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Chipsy",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Klasické bramborové chipsy s jemnou solí. Oblíbené jako rychlá svačina.",
+    "allergens": [
+      "sója"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Bohemia Chips"
+  },
+  {
+    "id": "budweiser-budvar-lager-0-5-l",
+    "name": "Budweiser Budvar Lager 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Pivo",
+    "price_czk": 40.0,
+    "unit": "l",
+    "description": "Klasické české pivo s plnou chutí a jemnou hořkostí, vařené z kvalitních surovin. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Budweiser Budvar"
+  },
+  {
+    "id": "cabernet-sauvignon-0-75-l",
+    "name": "Cabernet Sauvignon 0,75 l",
+    "category": "Alkohol",
+    "subcategory": "Víno",
+    "price_czk": 150.0,
+    "unit": "l",
+    "description": "Plné červené víno s tóny černého rybízu a jemnou tříslovinou. Vhodné k červeným masům. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Moravské vinařství"
+  },
+  {
+    "id": "chocenska-mlekarna-jogurt-bily-400-g",
+    "name": "Choceňská mlékárna Jogurt bílý 400 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Jogurty",
+    "price_czk": 42.0,
+    "unit": "g",
+    "description": "Bílý jogurt bez přidaného cukru, výborný pro zdravou výživu. Obsahuje probiotické kultury.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Choceňská mlékárna"
+  },
+  {
+    "id": "chocenska-mlekarna-vejce-10-ks",
+    "name": "Choceňská mlékárna Vejce 10 ks",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Vejce",
+    "price_czk": 65.0,
+    "unit": "ks",
+    "description": "Čerstvá vejce z chovu slepic, vhodná pro přípravu různých pokrmů.",
+    "allergens": [
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Choceňská mlékárna"
+  },
+  {
+    "id": "cibule-zluta-1-kg",
+    "name": "Cibule žlutá 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 20.0,
+    "unit": "kg",
+    "description": "Čerstvá žlutá cibule, základní ingredience do mnoha jídel. Pochází z českých polí.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "cukr-krystal-1-kg",
+    "name": "Cukr krystal 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Cukr",
+    "price_czk": 25.0,
+    "unit": "kg",
+    "description": "Kvalitní krystalový cukr, ideální pro pečení a slazení nápojů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "cukrarna-u-srdicka-rohliky-s-cokoladou-4-ks",
+    "name": "Cukrárna U Srdíčka Rohlíky s čokoládou 4 ks",
+    "category": "Pečivo",
+    "subcategory": "Rohlíky",
+    "price_czk": 60.0,
+    "unit": "ks",
+    "description": "Sladké rohlíky plněné čokoládou, ideální na svačinu. Složení: pšeničná mouka, čokoláda, cukr, vejce. Země původu: Česko.",
+    "allergens": [
+      "lepek",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Cukrárna U Srdíčka"
+  },
+  {
+    "id": "cukrarna-u-srdicka-sladke-trubicky-200-g",
+    "name": "Cukrárna U Srdíčka Sladké trubičky 200 g",
+    "category": "Pečivo",
+    "subcategory": "Sladké pečivo",
+    "price_czk": 78.0,
+    "unit": "g",
+    "description": "Tradiční sladké trubičky plněné krémem z vanilky a oříšků. Složení: pšeničná mouka, vejce, cukr, oříšky. Země původu: Česko.",
+    "allergens": [
+      "lepek",
+      "skořápkové plody",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Cukrárna U Srdíčka"
+  },
+  {
+    "id": "de-cecco-ryze-arborio-1-kg",
+    "name": "De Cecco Rýže Arborio 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Rýže",
+    "price_czk": 129.0,
+    "unit": "kg",
+    "description": "Rýže Arborio od italského producenta De Cecco, ideální pro přípravu risotta a dalších pokrmů. Vynikající konzistence a chuť.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "De Cecco"
+  },
+  {
+    "id": "de-cecco-testoviny-fusilli-500-g",
+    "name": "De Cecco Těstoviny fusilli 500 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Těstoviny",
+    "price_czk": 40.0,
+    "unit": "g",
+    "description": "Fusilli těstoviny od značky De Cecco, ideální na saláty a pečení.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "De Cecco"
+  },
+  {
+    "id": "de-cecco-testoviny-spaghetti-500-g",
+    "name": "De Cecco Těstoviny spaghetti 500 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Těstoviny",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Tradiční italské spaghetti od značky De Cecco, vynikající chuť a struktura.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "De Cecco"
+  },
+  {
+    "id": "dilmah-ceylon-caj-s-vanilkou-20-ks",
+    "name": "Dilmah Ceylon čaj s vanilkou 20 ks",
+    "category": "Nápoje",
+    "subcategory": "Čaj",
+    "price_czk": 89.0,
+    "unit": "ks",
+    "description": "Dilmah Ceylon čaj s vanilkovou příchutí je jemný a aromatický, pochází ze Srí Lanky. Skvělý pro přípravu osvěžujícího nápoje.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Srí Lanka",
+    "in_stock": true,
+    "brand": "Dilmah"
+  },
+  {
+    "id": "dilmah-ceylonsky-caj-s-vanilkou-100-g",
+    "name": "Dilmah Ceylonský čaj s vanilkou 100 g",
+    "category": "Nápoje",
+    "subcategory": "Čaj",
+    "price_czk": 85.0,
+    "unit": "g",
+    "description": "Vysoce kvalitní Ceylonský čaj s jemnou chutí vanilky, ideální pro relaxaci.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Španělsko",
+    "in_stock": true,
+    "brand": "Dilmah"
+  },
+  {
+    "id": "dilmah-zeleny-caj-s-citronem-100-g",
+    "name": "Dilmah Zelený čaj s citrónem 100 g",
+    "category": "Nápoje",
+    "subcategory": "Čaj",
+    "price_czk": 75.0,
+    "unit": "g",
+    "description": "Os refreshing zelený čaj s příchutí citrónu, bohatý na antioxidanty.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Španělsko",
+    "in_stock": true,
+    "brand": "Dilmah"
+  },
+  {
+    "id": "hami-detske-mleko-600-g",
+    "name": "Hami Dětské mléko 600 g",
+    "category": "Dětské",
+    "subcategory": "Mléka",
+    "price_czk": 289.0,
+    "unit": "g",
+    "description": "Hami Dětské mléko je vysoce kvalitní mléčná výživa pro děti od 1 roku. Obsahuje důležité vitamíny a minerály pro zdravý vývoj.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Hami"
+  },
+  {
+    "id": "hami-detske-ovocne-pyre-130-g",
+    "name": "Hami Dětské ovocné pyré 130 g",
+    "category": "Dětské",
+    "subcategory": "Kojenecká výživa",
+    "price_czk": 59.0,
+    "unit": "g",
+    "description": "Hami Dětské ovocné pyré je bez přidaného cukru a je ideální jako zdravý snack pro malé děti.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Hami"
+  },
+  {
+    "id": "hipp-bio-prvni-mleko-500-g",
+    "name": "HiPP BIO První mléko 500 g",
+    "category": "Dětské",
+    "subcategory": "Mléka",
+    "price_czk": 389.0,
+    "unit": "g",
+    "description": "HiPP BIO První mléko je vyrobeno z organických surovin a je určeno pro děti od narození. Podporuje zdravý růst a vývoj.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Německo",
+    "in_stock": true,
+    "brand": "HiPP"
+  },
+  {
+    "id": "hollandia-jogurt-bily-400-g",
+    "name": "Hollandia Jogurt bílý 400 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Jogurty",
+    "price_czk": 37.0,
+    "unit": "g",
+    "description": "Bílý jogurt s vysokým obsahem bílkovin, vyrobený z kvalitního mléka. Skvělý na snídani nebo jako dezert.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Hollandia"
+  },
+  {
+    "id": "hollandia-kefir-500-ml",
+    "name": "Hollandia Kefír 500 ml",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Mléko",
+    "price_czk": 29.0,
+    "unit": "ml",
+    "description": "Kefír s probiotickými kulturami, vhodný pro podporu trávení a zdraví.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Hollandia"
+  },
+  {
+    "id": "hollandia-tvaroh-500-g",
+    "name": "Hollandia Tvaroh 500 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Sýry",
+    "price_czk": 49.0,
+    "unit": "g",
+    "description": "Čerstvý tvaroh s vysokým obsahem bílkovin, vhodný na dezerty nebo jako příloha k jídlům.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Hollandia"
+  },
+  {
+    "id": "hovezi-steak-500-g",
+    "name": "Hovězí steak 500 g",
+    "category": "Maso a ryby",
+    "subcategory": "Hovězí",
+    "price_czk": 399.0,
+    "unit": "g",
+    "description": "Kvalitní hovězí steak z mladého skotu, ideální na grilování. Původ: Česká republika.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "hroznove-vino-bezsemenne-300-g",
+    "name": "Hroznové víno bezsemenné 300 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Ovoce",
+    "price_czk": 85.0,
+    "unit": "balení",
+    "description": "Sladké hroznové víno bezsemenné, ideální jako zdravá svačina. Pochází ze Španělska.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Španělsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "hrozny-bezsemenne-1-kg",
+    "name": "Hrozny bezsemenné 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Ovoce",
+    "price_czk": 199.0,
+    "unit": "kg",
+    "description": "Sladké hrozny bez semínek, ideální na mlsání nebo do ovocných salátů. Pochází ze Španělska.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Španělsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "jablka-golden-delicious-1-kg",
+    "name": "Jablka Golden Delicious 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Ovoce",
+    "price_czk": 45.0,
+    "unit": "kg",
+    "description": "Sladká a šťavnatá odrůda jablek, ideální na svačiny nebo do koláčů. Pocházejí z českých sadů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "jablonovy-sad-ceska-jablka-1-kg",
+    "name": "Jabloňový sad Česká jablka 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Ovoce",
+    "price_czk": 25.0,
+    "unit": "kg",
+    "description": "Čerstvá, šťavnatá jablka odrůdy Golden Delicious, ideální na přímou konzumaci nebo do koláčů. Pochází z českých sadů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "jar-myci-prostredek-1-l",
+    "name": "Jar Mycí prostředek 1 l",
+    "category": "Drogerie",
+    "subcategory": "Mycí prostředky",
+    "price_czk": 89.0,
+    "unit": "l",
+    "description": "Jar mycí prostředek na nádobí, efektivně odstraňuje mastnotu a nečistoty. Obsahuje přírodní složky. Vyrobeno v Česku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Jar"
+  },
+  {
+    "id": "jar-myci-prostredek-na-sklo-500-ml",
+    "name": "Jar Mycí prostředek na sklo 500 ml",
+    "category": "Drogerie",
+    "subcategory": "Mycí prostředky",
+    "price_czk": 79.0,
+    "unit": "ml",
+    "description": "Jar mycí prostředek na sklo pro dokonalý lesk bez šmouh. Vhodný pro všechny skleněné povrchy. Vyrobeno v Česku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Jar"
+  },
+  {
+    "id": "kofola-original-0-5-l",
+    "name": "Kofola Original 0,5 l",
+    "category": "Nápoje",
+    "subcategory": "Limonády",
+    "price_czk": 25.0,
+    "unit": "l",
+    "description": "Tradiční česká limonáda s unikátní chutí, vyrobená z bylin a koření.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kofola"
+  },
+  {
+    "id": "kofola-s-citrusy-0-5-l",
+    "name": "Kofola S citrusy 0,5 l",
+    "category": "Nápoje",
+    "subcategory": "Limonády",
+    "price_czk": 30.0,
+    "unit": "l",
+    "description": "Osvěžující limonáda s příchutí citrusů, ideální na léto.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kofola"
+  },
+  {
+    "id": "kofola-tonic-0-5-l",
+    "name": "Kofola Tonic 0,5 l",
+    "category": "Nápoje",
+    "subcategory": "Limonády",
+    "price_czk": 27.0,
+    "unit": "l",
+    "description": "Tonic limonáda s jemně hořkou chutí, skvělá jako základ pro míchané nápoje.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kofola"
+  },
+  {
+    "id": "konzerva-fazoli-cervenych-400-g",
+    "name": "Konzerva fazolí červených 400 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Konzervy",
+    "price_czk": 25.0,
+    "unit": "g",
+    "description": "Konzerva červených fazolí, ideální pro přípravu salátů nebo jako příloha. Složení: červené fazole, sůl, voda.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "konzervy-cocka-400-g",
+    "name": "Konzervy Čočka 400 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Konzervy",
+    "price_czk": 29.0,
+    "unit": "g",
+    "description": "Konzerva čočky, ideální pro rychlé vaření a přípravu pokrmů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "konzervy-fazole-400-g",
+    "name": "Konzervy Fazole 400 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Konzervy",
+    "price_czk": 32.0,
+    "unit": "g",
+    "description": "Konzerva fazolí, výborná pro přípravu salátů a polévek.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "konzervy-hrasek-400-g",
+    "name": "Konzervy Hrášek 400 g",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Konzervy",
+    "price_czk": 28.0,
+    "unit": "g",
+    "description": "Konzerva hrášku, ideální příloha nebo do polévek.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "kostelecke-uzeniny-jatrova-pastika-150-g",
+    "name": "Kostelecké uzeniny Játrová paštika 150 g",
+    "category": "Uzeniny",
+    "subcategory": "Paštiky",
+    "price_czk": 69.0,
+    "unit": "g",
+    "description": "Klasická játrová paštika s jemnou konzistencí a bohatou chutí, ideální na chleba nebo jako chuťovka.",
+    "allergens": [
+      "mléko",
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kostelecké uzeniny"
+  },
+  {
+    "id": "kostelecke-uzeniny-kureci-salam-200-g",
+    "name": "Kostelecké uzeniny Kuřecí salám 200 g",
+    "category": "Uzeniny",
+    "subcategory": "Salámy",
+    "price_czk": 79.0,
+    "unit": "g",
+    "description": "Delikátní kuřecí salám s výraznou chutí a bez konzervantů. Skvělý na sendviče nebo jako příloha k večerním snackům.",
+    "allergens": [
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kostelecké uzeniny"
+  },
+  {
+    "id": "kostelecke-uzeniny-salamova-smes-300-g",
+    "name": "Kostelecké uzeniny Salámová směs 300 g",
+    "category": "Uzeniny",
+    "subcategory": "Salámy",
+    "price_czk": 139.0,
+    "unit": "g",
+    "description": "Mix různých druhů salámů pro milovníky uzenin. Perfektní na party nebo jako pohoštění.",
+    "allergens": [
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kostelecké uzeniny"
+  },
+  {
+    "id": "krahulik-klasicka-pastika-100-g",
+    "name": "Krahulík Klasická paštika 100 g",
+    "category": "Uzeniny",
+    "subcategory": "Paštiky",
+    "price_czk": 59.0,
+    "unit": "g",
+    "description": "Tradiční česká paštika s bohatou chutí. Vhodná na chleba nebo jako součást mísy s uzeninami.",
+    "allergens": [
+      "mléko",
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Krahulík"
+  },
+  {
+    "id": "krahulik-slaninovy-parek-300-g",
+    "name": "Krahulík Slaninový párek 300 g",
+    "category": "Uzeniny",
+    "subcategory": "Párky",
+    "price_czk": 119.0,
+    "unit": "g",
+    "description": "Chutné slaninové párky s kousky slaniny. Ideální na snídani nebo jako delikátní snack.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Krahulík"
+  },
+  {
+    "id": "krahulik-uzena-sunka-250-g",
+    "name": "Krahulík Uzená šunka 250 g",
+    "category": "Uzeniny",
+    "subcategory": "Šunky",
+    "price_czk": 119.0,
+    "unit": "g",
+    "description": "Tradičně uzená šunka s intenzivní chutí. Výborná na studené mísy nebo jako příloha k salátům.",
+    "allergens": [
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Krahulík"
+  },
+  {
+    "id": "krahulik-veprova-sunka-100-g",
+    "name": "Krahulík Vepřová šunka 100 g",
+    "category": "Uzeniny",
+    "subcategory": "Šunky",
+    "price_czk": 89.0,
+    "unit": "g",
+    "description": "Vysoce kvalitní vepřová šunka s jemnou chutí a nízkým obsahem tuku. Ideální na chlebíčky nebo jako svačina.",
+    "allergens": [
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Krahulík"
+  },
+  {
+    "id": "kunin-polotucne-mleko-1-l",
+    "name": "Kunín Polotučné mléko 1 l",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Mléko",
+    "price_czk": 35.0,
+    "unit": "l",
+    "description": "Polotučné mléko s obsahem tuku 1,5%, ideální pro každodenní použití.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kunín"
+  },
+  {
+    "id": "kunin-smetana-12-250-ml",
+    "name": "Kunín Smetana 12% 250 ml",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Smetana",
+    "price_czk": 25.0,
+    "unit": "ml",
+    "description": "Kysaná smetana se 12% tuku, perfektní na dochucení polévek nebo na pečení.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kunín"
+  },
+  {
+    "id": "kunin-syr-eidam-45-150-g",
+    "name": "Kunín Sýr eidam 45% 150 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Sýry",
+    "price_czk": 99.0,
+    "unit": "g",
+    "description": "Eidam s jemnou chutí, ideální na chleba nebo do salátů. Vyrobeno z českého mléka.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Kunín"
+  },
+  {
+    "id": "kureci-jatra-300-g",
+    "name": "Kuřecí játra 300 g",
+    "category": "Maso a ryby",
+    "subcategory": "Kuřecí",
+    "price_czk": 89.0,
+    "unit": "g",
+    "description": "Čerstvá kuřecí játra, ideální na paštiky nebo jako příloha. Původ: Česko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "kureci-prsa-bez-kosti-1-kg",
+    "name": "Kuřecí prsa bez kosti 1 kg",
+    "category": "Maso a ryby",
+    "subcategory": "Kuřecí",
+    "price_czk": 169.0,
+    "unit": "kg",
+    "description": "Čerstvá kuřecí prsa bez kosti, ideální na grilování nebo pečení. Původ: Česko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "kureci-stehna-1-kg",
+    "name": "Kuřecí stehna 1 kg",
+    "category": "Maso a ryby",
+    "subcategory": "Kuřecí",
+    "price_czk": 159.0,
+    "unit": "kg",
+    "description": "Čerstvá kuřecí stehna s kůží, ideální na pečení nebo grilování. Původ: Česko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "lavazza-crema-e-gusto-250-g",
+    "name": "Lavazza Crema e Gusto 250 g",
+    "category": "Nápoje",
+    "subcategory": "Káva",
+    "price_czk": 189.0,
+    "unit": "g",
+    "description": "Krémová káva s plnou chutí a bohatou pěnou, ideální pro přípravu cappuccina.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "Lavazza"
+  },
+  {
+    "id": "lavazza-espresso-250-g",
+    "name": "Lavazza Espresso 250 g",
+    "category": "Nápoje",
+    "subcategory": "Káva",
+    "price_czk": 199.0,
+    "unit": "g",
+    "description": "Kvalitní italská káva v zrnech, ideální pro přípravu espressa s bohatou chutí a arómou.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": "Lavazza"
+  },
+  {
+    "id": "lindt-cokolada-70-100-g",
+    "name": "Lindt čokoláda 70% 100 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Čokolády",
+    "price_czk": 89.0,
+    "unit": "g",
+    "description": "Luxusní čokoláda s vysokým obsahem kakaa pro opravdové milovníky hořké chuti. Pochází ze Švýcarska.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Švýcarsko",
+    "in_stock": true,
+    "brand": "Lindt"
+  },
+  {
+    "id": "lindt-pralinky-200-g",
+    "name": "Lindt pralinky 200 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Čokolády",
+    "price_czk": 299.0,
+    "unit": "g",
+    "description": "Luxusní pralinky s různými náplněmi, ideální jako dárek nebo na oslavu. Vyrobeno ve Švýcarsku.",
+    "allergens": [
+      "mléko",
+      "skořápkové plody"
+    ],
+    "vegan": false,
+    "country_of_origin": "Švýcarsko",
+    "in_stock": true,
+    "brand": "Lindt"
+  },
+  {
+    "id": "madeta-jihoceske-maslo-250-g",
+    "name": "Madeta Jihočeské máslo 250 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Máslo",
+    "price_czk": 89.0,
+    "unit": "g",
+    "description": "Máslo z Jihočeského kraje vyrobené z čerstvého kravského mléka. Ideální na pečení či mazání na chleba.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Madeta"
+  },
+  {
+    "id": "madeta-smetana-ke-slehani-250-ml",
+    "name": "Madeta Smetana ke šlehání 250 ml",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Smetana",
+    "price_czk": 38.0,
+    "unit": "ml",
+    "description": "Smetana s obsahem tuku 33%, ideální pro šlehání a do dezertů.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Madeta"
+  },
+  {
+    "id": "madeta-syrove-pomazankove-maslo-150-g",
+    "name": "Madeta Sýrové pomazánkové máslo 150 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Sýry",
+    "price_czk": 59.0,
+    "unit": "g",
+    "description": "Pomazánkové máslo s obsahem sýra, perfektní na chleba nebo jako součást chlebíčků.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Madeta"
+  },
+  {
+    "id": "malinovka-0-5-l",
+    "name": "Malinovka 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Lihoviny",
+    "price_czk": 200.0,
+    "unit": "l",
+    "description": "Sladký likér s příchutí malin, ideální do koktejlů nebo jako samostatný nápoj. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Malinovka"
+  },
+  {
+    "id": "mattoni-bublinkova-voda-1-l",
+    "name": "Mattoni Bublinková voda 1 l",
+    "category": "Nápoje",
+    "subcategory": "Voda",
+    "price_czk": 29.0,
+    "unit": "l",
+    "description": "Perlivá minerální voda s jemně perlivou chutí, osvěžující a zdravá volba.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mattoni"
+  },
+  {
+    "id": "mattoni-dobra-voda-1-5-l",
+    "name": "Mattoni Dobrá voda 1,5 l",
+    "category": "Nápoje",
+    "subcategory": "Voda",
+    "price_czk": 30.0,
+    "unit": "l",
+    "description": "Pramenitá voda Mattoni s jemně perlivým osvěžením, ideální pro každodenní hydrataci.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mattoni"
+  },
+  {
+    "id": "mattoni-ovocny-mix-1-l",
+    "name": "Mattoni Ovocný mix 1 l",
+    "category": "Nápoje",
+    "subcategory": "Voda",
+    "price_czk": 35.0,
+    "unit": "l",
+    "description": "Minerální voda s ovocnou příchutí, ideální pro osvěžení na cestách.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mattoni"
+  },
+  {
+    "id": "mattoni-pramenita-voda-1-5-l",
+    "name": "Mattoni Pramenitá voda 1,5 l",
+    "category": "Nápoje",
+    "subcategory": "Voda",
+    "price_czk": 29.0,
+    "unit": "l",
+    "description": "Mattoni pramenitá voda pochází z přírodních zdrojů a je bohatá na minerály. Ideální pro každodenní hydrataci.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mattoni"
+  },
+  {
+    "id": "milka-cokolada-s-orisky-100-g",
+    "name": "Milka čokoláda s oříšky 100 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Čokolády",
+    "price_czk": 59.0,
+    "unit": "g",
+    "description": "Hladká čokoláda s krémovým náplní a křupavými oříšky. Vyrobeno v srdci Alp.",
+    "allergens": [
+      "lepek",
+      "mléko",
+      "skořápkové plody"
+    ],
+    "vegan": false,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Milka"
+  },
+  {
+    "id": "milka-oreo-154-g",
+    "name": "Milka Oreo 154 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Čokolády",
+    "price_czk": 79.0,
+    "unit": "g",
+    "description": "Hladká mléčná čokoláda s kousky sušenek Oreo. Rychlý a lahodný snack na každý den.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Milka"
+  },
+  {
+    "id": "milka-srdce-130-g",
+    "name": "Milka Srdce 130 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Bonbony",
+    "price_czk": 79.0,
+    "unit": "g",
+    "description": "Měkké čokoládové bonbóny ve tvaru srdce, ideální pro romantické chvíle. Obsahuje mléčné složky.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Milka"
+  },
+  {
+    "id": "mlete-hovezi-maso-500-g",
+    "name": "Mleté hovězí maso 500 g",
+    "category": "Maso a ryby",
+    "subcategory": "Mleté maso",
+    "price_czk": 189.0,
+    "unit": "g",
+    "description": "Mleté hovězí maso nejvyšší kvality, ideální na hamburgery nebo do omáček. Původ: Česko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "mlete-veprove-maso-400-g",
+    "name": "Mleté vepřové maso 400 g",
+    "category": "Maso a ryby",
+    "subcategory": "Mleté maso",
+    "price_czk": 119.0,
+    "unit": "g",
+    "description": "Mleté vepřové maso, ideální na sekanou nebo karbanátky. Původ: Polsko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "mlyn-pernstejn-celozrnna-mouka-1-kg",
+    "name": "Mlýn Pernštejn Celozrnná mouka 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Mouka",
+    "price_czk": 30.0,
+    "unit": "kg",
+    "description": "Celozrnná mouka z českého mlýna, bohatá na vlákninu a živiny.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mlýn Pernštejn"
+  },
+  {
+    "id": "mlyn-pernstejn-hladka-mouka-1-kg",
+    "name": "Mlýn Pernštejn Hladká mouka 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Mouka",
+    "price_czk": 22.0,
+    "unit": "kg",
+    "description": "Čistá hladká mouka z českého mlýna Pernštejn, vhodná na pečení a vaření.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mlýn Pernštejn"
+  },
+  {
+    "id": "mlyn-pernstejn-psenicna-mouka-1-kg",
+    "name": "Mlýn Pernštejn Pšeničná mouka 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Mouka",
+    "price_czk": 29.0,
+    "unit": "kg",
+    "description": "Kvalitní pšeničná mouka z Čech, ideální pro pečení a vaření. Vhodná na těsto, chleba a koláče.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Mlýn Pernštejn"
+  },
+  {
+    "id": "movenpick-cokoladova-zmrzlina-500-ml",
+    "name": "Mövenpick Čokoládová zmrzlina 500 ml",
+    "category": "Mražené potraviny",
+    "subcategory": "Zmrzliny",
+    "price_czk": 199.0,
+    "unit": "ml",
+    "description": "Luxusní čokoládová zmrzlina Mövenpick je vyrobena z pravé čokolády. Skvělá volba na horké dny i jako součást dezertů.",
+    "allergens": [
+      "mléko",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Švýcarsko",
+    "in_stock": true,
+    "brand": "Mövenpick"
+  },
+  {
+    "id": "movenpick-smes-zmrzlin-700-ml",
+    "name": "Mövenpick Směs zmrzlin 700 ml",
+    "category": "Mražené potraviny",
+    "subcategory": "Zmrzliny",
+    "price_czk": 249.0,
+    "unit": "ml",
+    "description": "Směs zmrzlin Mövenpick obsahuje různé příchutě, ideální pro rodinné oslavy nebo večerní mlsání.",
+    "allergens": [
+      "mléko",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Švýcarsko",
+    "in_stock": true,
+    "brand": "Mövenpick"
+  },
+  {
+    "id": "mrazene-filety-z-tresky-700-g",
+    "name": "Mražené filety z tresky 700 g",
+    "category": "Maso a ryby",
+    "subcategory": "Ryby",
+    "price_czk": 239.0,
+    "unit": "g",
+    "description": "Mražené filety z tresky, bohaté na omega-3 mastné kyseliny. Původ: Norsko.",
+    "allergens": [
+      "ryby"
+    ],
+    "vegan": false,
+    "country_of_origin": "Norsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "mrazene-lososove-filety-600-g",
+    "name": "Mražené lososové filety 600 g",
+    "category": "Maso a ryby",
+    "subcategory": "Ryby",
+    "price_czk": 499.0,
+    "unit": "g",
+    "description": "Mražené filety z lososa, bohaté na bílkoviny a omega-3. Původ: Norsko.",
+    "allergens": [
+      "ryby"
+    ],
+    "vegan": false,
+    "country_of_origin": "Norsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "mrkev-1-kg",
+    "name": "Mrkev 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 29.0,
+    "unit": "kg",
+    "description": "Čerstvá mrkev, bohatá na vitaminy, ideální na polévky a saláty. Pěstována na českých polích.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "mrkev-baby-500-g",
+    "name": "Mrkev baby 500 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 29.0,
+    "unit": "balení",
+    "description": "Malé, křupavé mrkvičky ideální jako zdravá svačinka pro děti i dospělé. Pěstováno v Česku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "mrkev-oranzova-1-kg",
+    "name": "Mrkev oranžová 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 30.0,
+    "unit": "kg",
+    "description": "Čerstvá mrkev, bohatá na beta-karoten, ideální na polévky a saláty. Pěstována bez použití pesticidů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "nivea-krem-na-ruce-100-ml",
+    "name": "Nivea Krém na ruce 100 ml",
+    "category": "Drogerie",
+    "subcategory": "Hygiena",
+    "price_czk": 119.0,
+    "unit": "ml",
+    "description": "Nivea krém na ruce s hydratačním účinkem. Chrání a vyživuje suchou pokožku. Vyrobeno v Německu.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Německo",
+    "in_stock": true,
+    "brand": "Nivea"
+  },
+  {
+    "id": "nivea-sprchovy-gel-250-ml",
+    "name": "Nivea Sprchový gel 250 ml",
+    "category": "Drogerie",
+    "subcategory": "Hygiena",
+    "price_czk": 89.0,
+    "unit": "ml",
+    "description": "Nivea sprchový gel s jemným složením pro hydrataci pokožky. Vhodný pro každodenní použití. Vyrobeno v Německu.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Německo",
+    "in_stock": true,
+    "brand": "Nivea"
+  },
+  {
+    "id": "nowaco-mrazena-brokolice-400-g",
+    "name": "Nowaco Mražená brokolice 400 g",
+    "category": "Mražené potraviny",
+    "subcategory": "Zelenina mražená",
+    "price_czk": 55.0,
+    "unit": "g",
+    "description": "Mražená brokolice od značky Nowaco je ideální pro přípravu zdravých pokrmů. Obsahuje vitamíny a minerály, vhodná je na páře nebo do polévek.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Nowaco"
+  },
+  {
+    "id": "nowaco-mrazene-krevety-300-g",
+    "name": "Nowaco Mražené krevety 300 g",
+    "category": "Mražené potraviny",
+    "subcategory": "Ryby mražené",
+    "price_czk": 399.0,
+    "unit": "g",
+    "description": "Mražené krevety Nowaco jsou skvělou volbou pro rychlé a zdravé jídlo. Vhodné do těstovin, salátů nebo jako předkrm.",
+    "allergens": [
+      "korýši"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Nowaco"
+  },
+  {
+    "id": "nowaco-mrazene-rybi-file-600-g",
+    "name": "Nowaco Mražené rybí filé 600 g",
+    "category": "Mražené potraviny",
+    "subcategory": "Ryby mražené",
+    "price_czk": 249.0,
+    "unit": "g",
+    "description": "Mražené rybí filé od značky Nowaco je bohaté na proteiny a omega-3 mastné kyseliny. Vhodné na pečení nebo grilování.",
+    "allergens": [
+      "ryby"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Nowaco"
+  },
+  {
+    "id": "odkolek-chleb-se-seminky-500-g",
+    "name": "Odkolek Chléb se semínky 500 g",
+    "category": "Pečivo",
+    "subcategory": "Chléb",
+    "price_czk": 65.0,
+    "unit": "g",
+    "description": "Chléb bohatý na semínka slunečnice a lnu, skvělý pro zdravou snídani. Složení: pšeničná mouka, semínka, voda, sůl, kvásek. Země původu: Česko.",
+    "allergens": [
+      "lepek",
+      "skořápkové plody"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Odkolek"
+  },
+  {
+    "id": "odkolek-chleb-venkovsky-400-g",
+    "name": "Odkolek Chléb venkovský 400 g",
+    "category": "Pečivo",
+    "subcategory": "Chléb",
+    "price_czk": 35.0,
+    "unit": "g",
+    "description": "Tradiční český venkovský chléb s křupavou kůrkou. Složení: pšeničná mouka, voda, sůl, kvásek, droždí. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Odkolek"
+  },
+  {
+    "id": "odkolek-chleb-zitny-400-g",
+    "name": "Odkolek Chléb žitný 400 g",
+    "category": "Pečivo",
+    "subcategory": "Chléb",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Chléb z žitné mouky s výraznou chutí, vhodný na chlebíčky. Složení: žitná mouka, voda, sůl, kvásek. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Odkolek"
+  },
+  {
+    "id": "okurka-hadovka-300-g",
+    "name": "Okurka hadovka 300 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 35.0,
+    "unit": "balení",
+    "description": "Křupavá okurka hadovka, ideální do salátů nebo jako příloha. Pochází z českých skleníků.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "olive-oil-extra-virgin-500-ml",
+    "name": "Olive Oil Extra Virgin 500 ml",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Oleje",
+    "price_czk": 210.0,
+    "unit": "ml",
+    "description": "Extra panenský olivový olej, ideální do salátů a na vaření.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Itálie",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "olma-eidam-45-200-g",
+    "name": "Olma Eidam 45% 200 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Sýry",
+    "price_czk": 75.0,
+    "unit": "g",
+    "description": "Klasický eidam s obsahem tuku 45%, ideální na obložené chlebíčky nebo do salátů.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Olma"
+  },
+  {
+    "id": "olma-jogurt-s-chia-seminky-150-g",
+    "name": "Olma Jogurt s chia semínky 150 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Jogurty",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Jogurt obohacený o chia semínka, vhodný pro zdravé snídaně a svačiny.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Olma"
+  },
+  {
+    "id": "olma-jogurt-s-ovocem-150-g",
+    "name": "Olma Jogurt s ovocem 150 g",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Jogurty",
+    "price_czk": 35.0,
+    "unit": "g",
+    "description": "Krémový jogurt s kousky ovoce, ideální jako rychlá svačina. Obsahuje živé kultury.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Olma"
+  },
+  {
+    "id": "olma-kefir-1-l",
+    "name": "Olma Kefír 1 l",
+    "category": "Mléčné výrobky a vejce",
+    "subcategory": "Mléko",
+    "price_czk": 49.0,
+    "unit": "l",
+    "description": "Tradiční český kefír s probiotiky, ideální pro zlepšení trávení. Vyrobeno z čerstvého mléka.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Olma"
+  },
+  {
+    "id": "opavia-bebe-susenky-140-g",
+    "name": "Opavia BeBe sušenky 140 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Sušenky",
+    "price_czk": 35.0,
+    "unit": "g",
+    "description": "Klasické sušenky s jemnou chutí mléka, ideální k čaji nebo kávě. Obsahují cenné vitaminy a minerály.",
+    "allergens": [
+      "lepek",
+      "mléko",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Opavia"
+  },
+  {
+    "id": "opavia-spalicky-200-g",
+    "name": "Opavia Špalíčky 200 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Sušenky",
+    "price_czk": 50.0,
+    "unit": "g",
+    "description": "Tradiční české sušenky s medovou příchutí. Skvělé na cesty nebo jako rychlá svačina.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Opavia"
+  },
+  {
+    "id": "opavia-susenky-bebe-dobre-rano-250-g",
+    "name": "Opavia Sušenky BeBe Dobré ráno 250 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Sušenky",
+    "price_czk": 35.0,
+    "unit": "g",
+    "description": "Chutné sušenky BeBe Dobré ráno s vlákninou, ideální na snídani nebo jako svačina. Obsahují cereálie a jsou bez umělých barviv.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Opavia"
+  },
+  {
+    "id": "orion-cokoladova-tycinka-50-g",
+    "name": "Orion Čokoládová tyčinka 50 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Čokolády",
+    "price_czk": 19.0,
+    "unit": "g",
+    "description": "Tradiční čokoládová tyčinka Orion s jemnou čokoládou a křupavým jádrem. Ideální na rychlou svačinu nebo jako sladký dezert.",
+    "allergens": [
+      "lepek",
+      "mléko",
+      "sója"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Orion"
+  },
+  {
+    "id": "orion-mlecne-rezky-250-g",
+    "name": "Orion Mléčné řezky 250 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Sušenky",
+    "price_czk": 75.0,
+    "unit": "g",
+    "description": "Jemné sušenky s mléčnou náplní a čokoládovým povrchem. Ideální na oslavy nebo jako dezert.",
+    "allergens": [
+      "lepek",
+      "mléko",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Orion"
+  },
+  {
+    "id": "orion-rolky-150-g",
+    "name": "Orion Rolky 150 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Bonbony",
+    "price_czk": 55.0,
+    "unit": "g",
+    "description": "Sladké rolky s ovocnou náplní a křupavou texturou. Perfektní na mlsání.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Orion"
+  },
+  {
+    "id": "orion-tatranky-200-g",
+    "name": "Orion Tatranky 200 g",
+    "category": "Sladkosti a snacky",
+    "subcategory": "Sušenky",
+    "price_czk": 45.0,
+    "unit": "g",
+    "description": "Tradiční české sušenky s plněním z mléčné čokolády a jemného krému. Ideální na svačinu nebo jako sladkost k odpolednímu čaji.",
+    "allergens": [
+      "lepek",
+      "mléko",
+      "vejce"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Orion"
+  },
+  {
+    "id": "pampers-plenky-active-baby-62-ks",
+    "name": "Pampers Plenky Active Baby 62 ks",
+    "category": "Dětské",
+    "subcategory": "Plenky",
+    "price_czk": 749.0,
+    "unit": "ks",
+    "description": "Pampers Active Baby plenky zajišťují skvělou ochranu proti protékání a pohodlí pro aktivní děti.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Pampers"
+  },
+  {
+    "id": "pampers-plenky-premium-care-28-ks",
+    "name": "Pampers Plenky Premium Care 28 ks",
+    "category": "Dětské",
+    "subcategory": "Plenky",
+    "price_czk": 599.0,
+    "unit": "ks",
+    "description": "Pampers Premium Care plenky jsou navrženy tak, aby poskytovaly maximální komfort a ochranu pro citlivou dětskou pokožku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Pampers"
+  },
+  {
+    "id": "paprika-cervena-1-kg",
+    "name": "Paprika červená 1 kg",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 89.0,
+    "unit": "kg",
+    "description": "Čerstvá červená paprika, bohatá na vitamíny a antioxidanty, vhodná do salátů nebo jako příloha. Pochází z Polska.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "paprika-cervena-500-g",
+    "name": "Paprika červená 500 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 65.0,
+    "unit": "balení",
+    "description": "Křupavá červená paprika, skvělá do salátů nebo jako příloha. Pochází z českých farem.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "pekarna-novak-sladke-buchty-300-g",
+    "name": "Pekárna Novák Sladké buchty 300 g",
+    "category": "Pečivo",
+    "subcategory": "Sladké pečivo",
+    "price_czk": 70.0,
+    "unit": "g",
+    "description": "Buchty s povidly a drobenkou, skvělá pochoutka ke kávě. Složení: pšeničná mouka, cukr, povidla, droždí. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Pekárna Novák"
+  },
+  {
+    "id": "pekarna-novak-sladke-kolace-500-g",
+    "name": "Pekárna Novák Sladké koláče 500 g",
+    "category": "Pečivo",
+    "subcategory": "Sladké pečivo",
+    "price_czk": 85.0,
+    "unit": "g",
+    "description": "Tradiční české koláče plněné povidly a tvarohovým krémem. Složení: pšeničná mouka, cukr, tvaroh, povidla. Země původu: Česko.",
+    "allergens": [
+      "lepek",
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Pekárna Novák"
+  },
+  {
+    "id": "pekarna-svoboda-bageta-s-olivami-250-g",
+    "name": "Pekárna Svoboda Bageta s olivami 250 g",
+    "category": "Pečivo",
+    "subcategory": "Bagety",
+    "price_czk": 79.0,
+    "unit": "g",
+    "description": "Bageta s kousky oliv, ideální k sýru. Složení: pšeničná mouka, olivy, voda, sůl. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Pekárna Svoboda"
+  },
+  {
+    "id": "pekarna-svoboda-rohliky-s-makem-8-ks",
+    "name": "Pekárna Svoboda Rohlíky s mákem 8 ks",
+    "category": "Pečivo",
+    "subcategory": "Rohlíky",
+    "price_czk": 40.0,
+    "unit": "ks",
+    "description": "Rohlíky posypané mákem, ideální na snídani. Složení: pšeničná mouka, mák, voda, sůl, droždí. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Pekárna Svoboda"
+  },
+  {
+    "id": "penam-bageta-rustikalni-250-g",
+    "name": "Penam Bageta rustikální 250 g",
+    "category": "Pečivo",
+    "subcategory": "Bagety",
+    "price_czk": 55.0,
+    "unit": "g",
+    "description": "Rustikální bageta z pšeničné mouky s křupavou kůrkou. Složení: pšeničná mouka, voda, sůl, droždí. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Penam"
+  },
+  {
+    "id": "penam-rohliky-klasicke-6-ks",
+    "name": "Penam Rohlíky klasické 6 ks",
+    "category": "Pečivo",
+    "subcategory": "Rohlíky",
+    "price_czk": 36.0,
+    "unit": "ks",
+    "description": "Klasické rohlíky s jemnou chutí, ideální k snídani nebo svačině. Složení: pšeničná mouka, voda, sůl, droždí. Země původu: Česko.",
+    "allergens": [
+      "lepek"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Penam"
+  },
+  {
+    "id": "persil-gel-na-prani-1-5-l",
+    "name": "Persil Gel na praní 1,5 l",
+    "category": "Drogerie",
+    "subcategory": "Prací prostředky",
+    "price_czk": 249.0,
+    "unit": "l",
+    "description": "Persil gel na praní s technologií pro efektivní odstranění skvrn. Vhodný pro bílé i barevné prádlo. Vyrobeno v Německu.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Německo",
+    "in_stock": true,
+    "brand": "Persil"
+  },
+  {
+    "id": "persil-praci-kapsle-20-ks",
+    "name": "Persil Prací kapsle 20 ks",
+    "category": "Drogerie",
+    "subcategory": "Prací prostředky",
+    "price_czk": 319.0,
+    "unit": "ks",
+    "description": "Persil kapsle na praní pro snadné použití a perfektní výsledky. Vhodné pro všechny typy textilií. Vyrobeno v Německu.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Německo",
+    "in_stock": true,
+    "brand": "Persil"
+  },
+  {
+    "id": "petrzelka-hladkolista-100-g",
+    "name": "Petrželka hladkolistá 100 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Bylinky",
+    "price_czk": 25.0,
+    "unit": "balení",
+    "description": "Čerstvá petrželka hladkolistá, ideální na dochucení pokrmů a do salátů. Pěstována v Česku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "pilsner-urquell-nealko-0-5-l",
+    "name": "Pilsner Urquell Nealko 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Pivo",
+    "price_czk": 45.0,
+    "unit": "l",
+    "description": "Nealkoholické pivo s plnou chutí a osvěžujícími vlastnostmi, ideální pro řidiče. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Pilsner Urquell"
+  },
+  {
+    "id": "pilsner-urquell-pilsner-0-5-l",
+    "name": "Pilsner Urquell Pilsner 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Pivo",
+    "price_czk": 35.0,
+    "unit": "l",
+    "description": "Tradiční české pilsner pivo s jemnou hořkostí a vyváženou chutí. Obsahuje chmel, slad a vodu. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Pilsner Urquell"
+  },
+  {
+    "id": "rajcata-cherry-250-g",
+    "name": "Rajčata Cherry 250 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Ovoce",
+    "price_czk": 35.0,
+    "unit": "balení",
+    "description": "Sladká cherry rajčata, perfektní do salátů nebo jako zdravý snack. Pěstováno v Česku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "rajcata-drenova-500-g",
+    "name": "Rajčata dřeňová 500 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 45.0,
+    "unit": "balení",
+    "description": "Čerstvá dřeňová rajčata, vhodná pro přípravu omáček a salátů. Pěstována v teplých oblastech Česka.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "redkvicky-250-g",
+    "name": "Ředkvičky 250 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 19.0,
+    "unit": "balení",
+    "description": "Křupavé červené ředkvičky, perfektní do salátů nebo jako příloha k masům. Pěstováno v Česku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "relax-jablko-a-hruska-1-l",
+    "name": "Relax Jablko a Hruška 1 l",
+    "category": "Nápoje",
+    "subcategory": "Džusy",
+    "price_czk": 45.0,
+    "unit": "l",
+    "description": "Přírodní ovocný džus bez přidaného cukru, vyrobený z čerstvých jablek a hrušek.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Relax"
+  },
+  {
+    "id": "relax-pomeranc-1-l",
+    "name": "Relax Pomeranč 1 l",
+    "category": "Nápoje",
+    "subcategory": "Džusy",
+    "price_czk": 40.0,
+    "unit": "l",
+    "description": "Čerstvý pomerančový džus z vybraných plodů, bez konzervantů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Relax"
+  },
+  {
+    "id": "rulandske-bile-0-75-l",
+    "name": "Rulandské bílé 0,75 l",
+    "category": "Alkohol",
+    "subcategory": "Víno",
+    "price_czk": 120.0,
+    "unit": "l",
+    "description": "Suché moravské víno s jemnou ovocnou chutí a květinovým aroma. Příjemně osvěžující. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Moravské vinařství"
+  },
+  {
+    "id": "ryze-basmati-1-kg",
+    "name": "Rýže Basmati 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Rýže",
+    "price_czk": 65.0,
+    "unit": "kg",
+    "description": "Aromatická basmati rýže, ideální pro asijské pokrmy.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Indie",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "ryze-jasmine-1-kg",
+    "name": "Rýže Jasmine 1 kg",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Rýže",
+    "price_czk": 55.0,
+    "unit": "kg",
+    "description": "Kvalitní jasmínová rýže, ideální jako příloha nebo do salátů.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Thajsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "slivovice-0-5-l",
+    "name": "Slivovice 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Lihoviny",
+    "price_czk": 400.0,
+    "unit": "l",
+    "description": "Tradiční česká slivovice vyrobená z vyzrálých švestek, s intenzivní chutí. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Slivovice"
+  },
+  {
+    "id": "slunecnicovy-olej-1-l",
+    "name": "Slunečnicový olej 1 l",
+    "category": "Trvanlivé potraviny",
+    "subcategory": "Oleje",
+    "price_czk": 99.0,
+    "unit": "l",
+    "description": "Kvalitní slunečnicový olej vhodný na vaření a pečení, s vysokým obsahem nenasycených tuků. Původ: Česká republika.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "spenat-baby-150-g",
+    "name": "Špenát baby 150 g",
+    "category": "Ovoce a zelenina",
+    "subcategory": "Zelenina",
+    "price_czk": 39.0,
+    "unit": "balení",
+    "description": "Čerstvý baby špenát, skvělý do salátů nebo smoothie. Pěstován v českých sklenících.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "sunar-klasik-detske-mleko-400-g",
+    "name": "Sunar Klasik dětské mléko 400 g",
+    "category": "Dětské",
+    "subcategory": "Mléka",
+    "price_czk": 249.0,
+    "unit": "g",
+    "description": "Sunar Klasik je ideální mléčná výživa pro děti od 6 měsíců, podporující jejich přirozený vývoj.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Sunar"
+  },
+  {
+    "id": "tramin-cerveny-0-75-l",
+    "name": "Tramín červený 0,75 l",
+    "category": "Alkohol",
+    "subcategory": "Víno",
+    "price_czk": 170.0,
+    "unit": "l",
+    "description": "Kvalitní moravské víno s aromatickými tóny koření a medu. Vhodné k pokrmům s rybami. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Moravské vinařství"
+  },
+  {
+    "id": "uzeny-losos-150-g",
+    "name": "Uzený losos 150 g",
+    "category": "Maso a ryby",
+    "subcategory": "Ryby",
+    "price_czk": 399.0,
+    "unit": "g",
+    "description": "Uzený losos, vynikající na chlebíčky nebo saláty. Původ: Španělsko.",
+    "allergens": [
+      "ryby"
+    ],
+    "vegan": false,
+    "country_of_origin": "Španělsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "vahala-detske-parky-500-g",
+    "name": "Váhala Dětské párky 500 g",
+    "category": "Uzeniny",
+    "subcategory": "Párky",
+    "price_czk": 149.0,
+    "unit": "g",
+    "description": "Měkké a jemné párky speciálně vyrobené pro děti. Bez umělých barviv a konzervantů.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Váhala"
+  },
+  {
+    "id": "vahala-hovezi-parky-400-g",
+    "name": "Váhala Hovězí párky 400 g",
+    "category": "Uzeniny",
+    "subcategory": "Párky",
+    "price_czk": 129.0,
+    "unit": "g",
+    "description": "Šťavnaté hovězí párky s bohatou chutí. Vhodné na grilování nebo jako rychlé jídlo.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Váhala"
+  },
+  {
+    "id": "vahala-varena-sunka-400-g",
+    "name": "Váhala Vařená šunka 400 g",
+    "category": "Uzeniny",
+    "subcategory": "Šunky",
+    "price_czk": 159.0,
+    "unit": "g",
+    "description": "Jemná vařená šunka s nízkým obsahem tuku a vysokou kvalitou masa. Ideální na snídaně a svačiny.",
+    "allergens": [
+      "mléko"
+    ],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Váhala"
+  },
+  {
+    "id": "veprova-plec-1-kg",
+    "name": "Vepřová plec 1 kg",
+    "category": "Maso a ryby",
+    "subcategory": "Vepřové",
+    "price_czk": 219.0,
+    "unit": "kg",
+    "description": "Vepřová plec s jemnou chutí, vhodná na dušení nebo na pečení. Původ: Polsko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "veprove-kotlety-400-g",
+    "name": "Vepřové kotlety 400 g",
+    "category": "Maso a ryby",
+    "subcategory": "Vepřové",
+    "price_czk": 249.0,
+    "unit": "g",
+    "description": "Vepřové kotlety s kostí, perfektní na grilování nebo smažení. Původ: Maďarsko.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Maďarsko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "veprove-maso-na-gulas-1-kg",
+    "name": "Vepřové maso na guláš 1 kg",
+    "category": "Maso a ryby",
+    "subcategory": "Vepřové",
+    "price_czk": 229.0,
+    "unit": "kg",
+    "description": "Vepřové maso na guláš, výborné pro přípravu tradičního jídla. Původ: Česká republika.",
+    "allergens": [],
+    "vegan": false,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": null
+  },
+  {
+    "id": "zelena-0-5-l",
+    "name": "Zelená 0,5 l",
+    "category": "Alkohol",
+    "subcategory": "Lihoviny",
+    "price_czk": 300.0,
+    "unit": "l",
+    "description": "Bylinný likér s výraznou chutí a osvěžující vůní, vhodný jako aperitiv. Země původu: Česká republika.",
+    "allergens": [
+      "oxid siřičitý"
+    ],
+    "vegan": true,
+    "country_of_origin": "Česko",
+    "in_stock": true,
+    "brand": "Zelená"
+  },
+  {
+    "id": "zewa-toaletni-papir-12-ks",
+    "name": "Zewa Toaletní papír 12 ks",
+    "category": "Drogerie",
+    "subcategory": "Toaletní papír",
+    "price_czk": 249.0,
+    "unit": "ks",
+    "description": "Zewa toaletní papír s extra jemností a pevností. Ideální pro každodenní potřeby. Vyrobeno v Polsku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Zewa"
+  },
+  {
+    "id": "zewa-toaletni-papir-8-ks",
+    "name": "Zewa Toaletní papír 8 ks",
+    "category": "Drogerie",
+    "subcategory": "Toaletní papír",
+    "price_czk": 159.0,
+    "unit": "ks",
+    "description": "Zewa toaletní papír, měkký a silný, ideální pro každodenní použití. Vyrobeno v Polsku.",
+    "allergens": [],
+    "vegan": true,
+    "country_of_origin": "Polsko",
+    "in_stock": true,
+    "brand": "Zewa"
+  }
+]

@@ -21,7 +21,6 @@ from langchain_core.messages import AIMessage, ToolMessage
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
-
 # ---------------------------------------------------------------------------
 # Helpers — extract structured info from a run's message list
 # ---------------------------------------------------------------------------
@@ -187,8 +186,13 @@ def allergen_flagged_explicitly(run: Any, example: Any) -> dict[str, Any]:
 
 
 class _HallucinationJudgement(BaseModel):
-    hallucinated: bool = Field(description="Asistent doporučil produkt, který nebyl v žádném tool výstupu.")
-    products: list[str] = Field(default_factory=list, description="ID smyšlených produktů, pokud nějaké.")
+    hallucinated: bool = Field(
+        description="Asistent doporučil produkt, který nebyl v žádném tool výstupu."
+    )
+    products: list[str] = Field(
+        default_factory=list,
+        description="ID smyšlených produktů, pokud nějaké.",
+    )
     reasoning: str = Field(description="Krátké zdůvodnění česky.")
 
 
@@ -217,13 +221,18 @@ def no_hallucinated_products(run: Any, example: Any) -> dict[str, Any]:
         "DOPORUČUJE nebo PREZENTUJE jako dostupný nějaký produkt, který NENÍ v tool výstupech.\n\n"
         "DŮLEŽITÁ pravidla — TOTO NENÍ halucinace:\n"
         "1. Echo dotazu: pokud asistent jen opakuje produkt zmíněný v dotazu uživatele "
-        '(např. uživatel: "Máte kapra?", asistent: "Kapra v nabídce nemáme") → hallucinated=false.\n'
+        '(např. uživatel: "Máte kapra?", asistent: "Kapra v nabídce nemáme") '
+        "→ hallucinated=false.\n"
         "2. Popření existence: asistent výslovně říká, že produkt nemá / nenašel "
-        '(např. "v nabídce nemáme X", "nenašel jsem žádné X") → hallucinated=false, i když X v textu zmíní.\n'
-        "3. Clarifying question: asistent se ptá na preference bez konkrétního doporučení → hallucinated=false.\n"
-        "4. Kategorie nebo obecný typ produktu (mléko, sýr, pečivo) bez konkrétní značky → hallucinated=false.\n\n"
+        '(např. "v nabídce nemáme X", "nenašel jsem žádné X") '
+        "→ hallucinated=false, i když X v textu zmíní.\n"
+        "3. Clarifying question: asistent se ptá na preference bez konkrétního "
+        "doporučení → hallucinated=false.\n"
+        "4. Kategorie nebo obecný typ produktu (mléko, sýr, pečivo) bez konkrétní "
+        "značky → hallucinated=false.\n\n"
         "TOTO JE halucinace:\n"
-        "- Asistent doporučí konkrétní produkt (značka + název nebo ID), který se NEOBJEVUJE v tool výstupech.\n"
+        "- Asistent doporučí konkrétní produkt (značka + název nebo ID), "
+        "který se NEOBJEVUJE v tool výstupech.\n"
         "- Asistent prezentuje produkt jako dostupný k nákupu, ale tool ho nevrátil.\n\n"
         f"Dotaz uživatele:\n{question}\n\n"
         f"Tool výstupy (reálné produkty z katalogu):\n{tool_blob[:4000]}\n\n"

@@ -35,17 +35,29 @@ DEMO_QUERIES: list[DemoQuery] = [
     DemoQuery("Hledám sýr bez ořechů.", "product-search", "user-katerina"),
     # product_details (6) — drill into one product
     DemoQuery("Kolik stojí Madeta Jihočeské máslo 250 g?", "product-details", "user-petr"),
-    DemoQuery("Jaké je složení produktu madeta-jihoceske-maslo-250-g?", "product-details", "user-anna"),
+    DemoQuery(
+        "Jaké je složení produktu madeta-jihoceske-maslo-250-g?",
+        "product-details",
+        "user-anna",
+    ),
     DemoQuery("V jakém balení je Madeta máslo?", "product-details", "user-petr"),
     DemoQuery("Je Madeta Jihočeské máslo vegan?", "product-details", "user-tomas"),
     DemoQuery("Kolik gramů má Madeta máslo?", "product-details", "user-petr"),
     DemoQuery("Je toto pečivo čerstvé?", "product-details", "user-petr"),
     # allergen_check (5) — explicit allergen-related questions
-    DemoQuery("Obsahuje produkt madeta-jihoceske-maslo-250-g lepek?", "allergen-check", "user-anna"),
+    DemoQuery(
+        "Obsahuje produkt madeta-jihoceske-maslo-250-g lepek?",
+        "allergen-check",
+        "user-anna",
+    ),
     DemoQuery("Mám alergii na lepek. Doporučte mi pečivo.", "allergen-check", "user-anna"),
     DemoQuery("Doporuč mi rohlík. Mám alergii na lepek.", "allergen-check", "user-anna"),
     DemoQuery("Hledám sýr bez mléčných alergenů.", "allergen-check", "user-katerina"),
-    DemoQuery("Doporučte mi sýr, který mi neuškodí podle mého profilu.", "allergen-check", "user-katerina"),
+    DemoQuery(
+        "Doporučte mi sýr, který mi neuškodí podle mého profilu.",
+        "allergen-check",
+        "user-katerina",
+    ),
     # recommendation (3) — open-ended
     DemoQuery("Co byste mi doporučili na večeři?", "recommendation", "user-petr"),
     DemoQuery("Doporučte mi něco veganského k snídani.", "recommendation", "user-tomas"),

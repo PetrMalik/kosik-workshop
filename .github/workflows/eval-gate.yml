@@ -1,0 +1,90 @@
+name: eval-gate
+
+on:
+  pull_request:
+    paths:
+      - 'src/kosik_workshop/prompts/**'
+      - 'src/kosik_workshop/agent.py'
+      - 'src/kosik_workshop/tools.py'
+      - 'src/kosik_workshop/evals/**'
+      - 'data/products.json'
+      - 'scripts/ci_eval_gate.py'
+      - 'scripts/build_index.py'
+      - '.github/workflows/eval-gate.yml'
+  workflow_dispatch:
+    inputs:
+      threshold:
+        description: 'Min score per evaluator'
+        required: false
+        default: '0.8'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: eval-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+      LANGSMITH_TRACING: "true"
+      LANGSMITH_PROJECT: "kosik-workshop-ci"
+      LANGSMITH_ENDPOINT: "https://eu.smith.langchain.com"
+      ENVIRONMENT: "development"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --group dev
+
+      - name: Cache Chroma index
+        id: chroma-cache
+        uses: actions/cache@v4
+        with:
+          path: data/chroma
+          key: chroma-text-embedding-3-small-${{ hashFiles('data/products.json') }}
+
+      - name: Build Chroma index (cache miss)
+        if: steps.chroma-cache.outputs.cache-hit != 'true'
+        run: uv run python scripts/build_index.py
+
+      - name: Run eval gate
+        id: eval
+        continue-on-error: true
+        run: |
+          uv run python scripts/ci_eval_gate.py \
+            --threshold "${{ inputs.threshold || '0.8' }}" \
+            --report-file eval_report.md
+
+      - name: Find existing eval comment
+        if: github.event_name == 'pull_request'
+        id: find-comment
+        uses: peter-evans/find-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: 'Eval Gate — `kosik-eval-golden`'
+
+      - name: Post / update PR comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: eval_report.md
+          edit-mode: replace
+
+      - name: Fail if eval gate failed
+        if: steps.eval.outcome == 'failure'
+        run: exit 1

@@ -76,9 +76,7 @@ GOLDEN_EXAMPLES: list[dict[str, Any]] = [
         },
     },
     {
-        "inputs": {
-            "question": "Doporučte mi sýr, který mi neuškodí podle mého profilu."
-        },
+        "inputs": {"question": "Doporučte mi sýr, který mi neuškodí podle mého profilu."},
         "outputs": {
             "expected_tools": ["user_allergens", "search_products"],
             "expected_args": {},
@@ -170,9 +168,7 @@ def seed_dataset(client: Client | None = None, replace: bool = False) -> str:
         None,
     )
     if existing is None:
-        dataset = client.create_dataset(
-            dataset_name=DATASET_NAME, description=description
-        )
+        dataset = client.create_dataset(dataset_name=DATASET_NAME, description=description)
     else:
         dataset = existing
         if replace:
@@ -180,15 +176,10 @@ def seed_dataset(client: Client | None = None, replace: bool = False) -> str:
                 client.delete_example(ex.id)
 
     existing_questions = {
-        ex.inputs.get("question")
-        for ex in client.list_examples(dataset_id=dataset.id)
+        ex.inputs.get("question") for ex in client.list_examples(dataset_id=dataset.id)
     }
 
-    to_create = [
-        ex
-        for ex in GOLDEN_EXAMPLES
-        if ex["inputs"]["question"] not in existing_questions
-    ]
+    to_create = [ex for ex in GOLDEN_EXAMPLES if ex["inputs"]["question"] not in existing_questions]
     if to_create:
         client.create_examples(
             inputs=[ex["inputs"] for ex in to_create],

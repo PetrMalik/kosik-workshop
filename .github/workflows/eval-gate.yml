@@ -34,7 +34,7 @@ jobs:
       LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
       LANGSMITH_TRACING: "true"
       LANGSMITH_PROJECT: "kosik-workshop-ci"
-      LANGSMITH_ENDPOINT: "https://eu.smith.langchain.com"
+      LANGSMITH_ENDPOINT: "https://eu.api.smith.langchain.com"
       ENVIRONMENT: "development"
     steps:
       - uses: actions/checkout@v4

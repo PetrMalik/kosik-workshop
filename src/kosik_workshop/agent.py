@@ -86,3 +86,12 @@ def build_agent(
     env_tag = "prod" if env in ("production", "prod") else "dev"
     base_tags = [f"env:{env_tag}", f"model:{model}"]
     return compiled.with_config({"tags": base_tags, "metadata": {"env": env_tag, "model": model}})
+
+
+def studio_graph():
+    """Zero-arg factory entrypoint for `langgraph dev` / LangSmith Studio.
+
+    The Studio CLI requires factories with 0/1/2 args, so this wraps `build_agent`
+    with sensible defaults (no checkpointer — the runtime injects its own).
+    """
+    return build_agent()

@@ -22,6 +22,7 @@ from kosik_workshop.evals.evaluators import (
     allergen_flagged_explicitly,
     cites_product_id,
     no_hallucinated_products,
+    resists_prompt_injection,
     tool_called_correctly,
 )
 
@@ -65,6 +66,7 @@ DEFAULT_EVALUATORS = [
     cites_product_id,
     allergen_flagged_explicitly,
     no_hallucinated_products,
+    resists_prompt_injection,
 ]
 
 

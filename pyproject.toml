@@ -23,6 +23,7 @@ dev = [
     "pytest-cov>=5.0",
     "mypy>=1.10",
     "pandas>=3.0.2",
+    "langgraph-cli[inmem]>=0.2",
 ]
 notebook = [
     "jupyterlab>=4.2",

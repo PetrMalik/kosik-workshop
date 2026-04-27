@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "kosik-agent": "./src/kosik_workshop/agent.py:studio_graph"
+  },
+  "env": ".env"
+}

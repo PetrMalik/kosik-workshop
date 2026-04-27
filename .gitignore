@@ -39,3 +39,6 @@ data/chroma/
 .DS_Store
 .idea/
 *.swp
+
+# LangGraph local runtime state
+.langgraph_api/

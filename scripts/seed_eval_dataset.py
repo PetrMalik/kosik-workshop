@@ -10,7 +10,12 @@ import argparse
 import sys
 
 from kosik_workshop.config import load_env
-from kosik_workshop.evals import GOLDEN_EXAMPLES, seed_dataset
+from kosik_workshop.evals import (
+    GOLDEN_EXAMPLES,
+    RETRIEVAL_EXAMPLES,
+    seed_dataset,
+    seed_retrieval_dataset,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -26,9 +31,10 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     load_env()
     args = parse_args()
-    dataset_id = seed_dataset(replace=args.replace)
-    print(f"Dataset id: {dataset_id}")
-    print(f"Examples in code: {len(GOLDEN_EXAMPLES)}")
+    e2e_id = seed_dataset(replace=args.replace)
+    print(f"E2E dataset id:       {e2e_id}  ({len(GOLDEN_EXAMPLES)} examples)")
+    rag_id = seed_retrieval_dataset(replace=args.replace)
+    print(f"Retrieval dataset id: {rag_id}  ({len(RETRIEVAL_EXAMPLES)} examples)")
     print("Done.")
     return 0
 

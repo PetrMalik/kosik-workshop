@@ -247,3 +247,198 @@ def seed_dataset(client: Client | None = None, replace: bool = False) -> str:
             dataset_id=dataset.id,
         )
     return str(dataset.id)
+
+
+# ---------------------------------------------------------------------------
+# Retrieval (RAG) eval dataset — měříme čistě `search_products`, bez agenta.
+# ---------------------------------------------------------------------------
+
+RETRIEVAL_DATASET_NAME = "kosik-retrieval-golden"
+
+RETRIEVAL_EXAMPLES: list[dict[str, Any]] = [
+    {
+        "inputs": {"query": "český chléb", "filters": {"category": "Pečivo"}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "odkolek-chleb-zitny-400-g",
+                "odkolek-chleb-venkovsky-400-g",
+                "odkolek-chleb-se-seminky-500-g",
+            ],
+            "category": "bread",
+        },
+    },
+    {
+        "inputs": {"query": "máslo", "filters": {}, "k": 5},
+        "outputs": {
+            "relevant_ids": ["madeta-jihoceske-maslo-250-g"],
+            "category": "butter",
+        },
+    },
+    {
+        "inputs": {"query": "kuřecí maso", "filters": {"category": "Maso a ryby"}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "kureci-prsa-bez-kosti-1-kg",
+                "kureci-stehna-1-kg",
+                "kureci-jatra-300-g",
+            ],
+            "category": "chicken",
+        },
+    },
+    {
+        "inputs": {"query": "italské těstoviny", "filters": {}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "barilla-spaghetti-500-g",
+                "barilla-testoviny-penne-500-g",
+                "de-cecco-testoviny-fusilli-500-g",
+                "de-cecco-testoviny-spaghetti-500-g",
+            ],
+            "category": "pasta",
+        },
+    },
+    {
+        "inputs": {"query": "české pivo", "filters": {"category": "Alkohol"}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "pilsner-urquell-pilsner-0-5-l",
+                "budweiser-budvar-lager-0-5-l",
+            ],
+            "category": "czech_beer",
+        },
+    },
+    {
+        "inputs": {"query": "nealkoholický nápoj kola", "filters": {}, "k": 5},
+        "outputs": {
+            "relevant_ids": ["kofola-original-0-5-l", "kofola-s-citrusy-0-5-l"],
+            "category": "soft_drink",
+        },
+    },
+    {
+        "inputs": {"query": "jogurt bílý", "filters": {}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "hollandia-jogurt-bily-400-g",
+                "chocenska-mlekarna-jogurt-bily-400-g",
+            ],
+            "category": "yogurt",
+        },
+    },
+    {
+        "inputs": {"query": "levná česká jablka", "filters": {"max_price_czk": 50}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "jablka-golden-delicious-1-kg",
+                "jablonovy-sad-ceska-jablka-1-kg",
+            ],
+            "category": "cheap_apple",
+        },
+    },
+    {
+        "inputs": {"query": "čokoláda Lindt", "filters": {}, "k": 5},
+        "outputs": {
+            "relevant_ids": ["lindt-cokolada-70-100-g", "lindt-pralinky-200-g"],
+            "category": "lindt",
+        },
+    },
+    {
+        "inputs": {"query": "kávová zrna espresso", "filters": {}, "k": 5},
+        "outputs": {
+            "relevant_ids": ["lavazza-espresso-250-g", "lavazza-crema-e-gusto-250-g"],
+            "category": "coffee",
+        },
+    },
+    {
+        "inputs": {"query": "prací prášek", "filters": {"category": "Drogerie"}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "ariel-praci-prasek-2-5-kg",
+                "ariel-gel-na-prani-1-2-l",
+                "persil-gel-na-prani-1-5-l",
+                "persil-praci-kapsle-20-ks",
+            ],
+            "category": "laundry",
+        },
+    },
+    {
+        "inputs": {"query": "dětské pleny", "filters": {"category": "Dětské"}, "k": 5},
+        "outputs": {
+            "relevant_ids": [
+                "pampers-plenky-active-baby-62-ks",
+                "pampers-plenky-premium-care-28-ks",
+            ],
+            "category": "diapers",
+        },
+    },
+]
+
+
+RETRIEVAL_INPUTS_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "query": {"type": "string", "minLength": 1},
+        "filters": {"type": "object"},
+        "k": {"type": "integer", "minimum": 1, "maximum": 20},
+    },
+    "required": ["query"],
+    "additionalProperties": False,
+}
+
+RETRIEVAL_OUTPUTS_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "relevant_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "category": {"type": "string"},
+    },
+    "required": ["relevant_ids"],
+    "additionalProperties": True,
+}
+
+
+def seed_retrieval_dataset(client: Client | None = None, replace: bool = False) -> str:
+    """Create or update the retrieval golden dataset in LangSmith.
+
+    Idempotentní (dedup podle `inputs.query`). Stejná schema-enforcement logika
+    jako `seed_dataset` — UI „Add to Dataset" odmítne nesedící rows.
+    """
+    client = client or Client()
+    description = (
+        "Retrieval golden set for the Košík catalog search (query → expected product ids in top-k)."
+    )
+
+    existing = next(
+        (d for d in client.list_datasets(dataset_name=RETRIEVAL_DATASET_NAME)),
+        None,
+    )
+    if existing is None:
+        dataset = client.create_dataset(
+            dataset_name=RETRIEVAL_DATASET_NAME,
+            description=description,
+            inputs_schema=RETRIEVAL_INPUTS_SCHEMA,
+            outputs_schema=RETRIEVAL_OUTPUTS_SCHEMA,
+        )
+    else:
+        dataset = existing
+        client.request_with_retries(
+            "PATCH",
+            f"/datasets/{dataset.id}",
+            json={
+                "inputs_schema_definition": RETRIEVAL_INPUTS_SCHEMA,
+                "outputs_schema_definition": RETRIEVAL_OUTPUTS_SCHEMA,
+            },
+        )
+        if replace:
+            for ex in client.list_examples(dataset_id=dataset.id):
+                client.delete_example(ex.id)
+
+    existing_queries = {
+        ex.inputs.get("query") for ex in client.list_examples(dataset_id=dataset.id)
+    }
+    to_create = [ex for ex in RETRIEVAL_EXAMPLES if ex["inputs"]["query"] not in existing_queries]
+    if to_create:
+        client.create_examples(
+            inputs=[ex["inputs"] for ex in to_create],
+            outputs=[ex["outputs"] for ex in to_create],
+            dataset_id=dataset.id,
+        )
+    return str(dataset.id)

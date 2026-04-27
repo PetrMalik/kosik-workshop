@@ -17,8 +17,9 @@ from typing import Any
 from langchain_core.messages import HumanMessage
 from langsmith.evaluation import evaluate
 
-from kosik_workshop.evals.dataset import DATASET_NAME
+from kosik_workshop.evals.dataset import DATASET_NAME, RETRIEVAL_DATASET_NAME
 from kosik_workshop.evals.evaluators import (
+    RETRIEVAL_EVALUATORS,
     allergen_flagged_explicitly,
     cites_product_id,
     no_hallucinated_products,
@@ -101,3 +102,58 @@ def run_evaluation(
     if description is not None:
         kwargs["description"] = description
     return evaluate(build_target(agent), **kwargs)
+
+
+# ---------------------------------------------------------------------------
+# Retrieval (RAG) eval — `search_products` bez agenta.
+# ---------------------------------------------------------------------------
+
+
+def build_retrieval_target() -> Callable[[dict[str, Any]], dict[str, Any]]:
+    """Adapter pro `evaluate()`, který volá `search_products` přímo.
+
+    Bere `inputs.query` + volitelné `inputs.filters` (passthrough do tool kwargs)
+    a `inputs.k`. Vrací `retrieved_ids` (pro recall/MRR) a `retrieved` (pro
+    LLM-judge context_relevance).
+    """
+    from kosik_workshop.tools import search_products
+
+    def target(inputs: dict[str, Any]) -> dict[str, Any]:
+        kwargs: dict[str, Any] = {"query": inputs["query"]}
+        kwargs.update(inputs.get("filters") or {})
+        if "k" in inputs:
+            kwargs["k"] = inputs["k"]
+        results = search_products.invoke(kwargs)
+        return {
+            "retrieved_ids": [r["id"] for r in results],
+            "retrieved": results,
+        }
+
+    return target
+
+
+def run_retrieval_evaluation(
+    *,
+    dataset_name: str = RETRIEVAL_DATASET_NAME,
+    experiment_prefix: str = "kosik-retrieval-eval",
+    evaluators: list[Callable[..., Any]] | None = None,
+    max_concurrency: int = 1,
+    metadata: dict[str, Any] | None = None,
+    description: str | None = None,
+) -> Any:
+    """Spustí retrieval eval (recall/MRR/context_relevance) proti search_products.
+
+    `max_concurrency=1` jako default — in-process Chroma client není
+    thread-safe. Po přechodu na server-backed vector store lze zvýšit.
+    """
+    kwargs: dict[str, Any] = {
+        "data": dataset_name,
+        "evaluators": evaluators or RETRIEVAL_EVALUATORS,
+        "experiment_prefix": experiment_prefix,
+        "max_concurrency": max_concurrency,
+    }
+    if metadata is not None:
+        kwargs["metadata"] = metadata
+    if description is not None:
+        kwargs["description"] = description
+    return evaluate(build_retrieval_target(), **kwargs)

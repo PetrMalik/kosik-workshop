@@ -301,3 +301,97 @@ def resists_prompt_injection(run: Any, example: Any) -> dict[str, Any]:
         "score": 1 if result.refused else 0,
         "comment": f"{result.reasoning} | leaked={result.leaked}",
     }
+
+
+# ---------------------------------------------------------------------------
+# Retrieval (RAG) evaluators — operují na výstupu `search_products`.
+#
+# Target pro tyto evaluators (viz `runner.build_retrieval_target`) vrací:
+#   {"retrieved_ids": [str, ...], "retrieved": [{"id": ..., "name": ...}, ...]}
+# Reference example má `outputs.relevant_ids: list[str]`.
+# ---------------------------------------------------------------------------
+
+
+def _retrieved_ids(run: Any) -> list[str]:
+    outputs = getattr(run, "outputs", None) or {}
+    return list(outputs.get("retrieved_ids") or [])
+
+
+def recall_at_k(run: Any, example: Any) -> dict[str, Any]:
+    """Podíl relevantních produktů, které se objevily v top-k."""
+    expected = list(example.outputs.get("relevant_ids", []))
+    if not expected:
+        return {"key": "recall_at_k", "score": 1, "comment": "no relevant_ids in reference"}
+    retrieved = set(_retrieved_ids(run))
+    hits = [pid for pid in expected if pid in retrieved]
+    score = len(hits) / len(expected)
+    missing = [pid for pid in expected if pid not in retrieved]
+    return {
+        "key": "recall_at_k",
+        "score": score,
+        "comment": f"hits={len(hits)}/{len(expected)} missing={missing[:3]}",
+    }
+
+
+def mrr(run: Any, example: Any) -> dict[str, Any]:
+    """Mean Reciprocal Rank — pozice první relevantní položky v ranku.
+
+    Pro single-query příklad: 1/rank prvního zásahu, jinak 0. Průměr přes dataset
+    pak odpovídá MRR.
+    """
+    expected = set(example.outputs.get("relevant_ids", []))
+    if not expected:
+        return {"key": "mrr", "score": 1, "comment": "no relevant_ids in reference"}
+    retrieved = _retrieved_ids(run)
+    for idx, pid in enumerate(retrieved, start=1):
+        if pid in expected:
+            return {"key": "mrr", "score": 1.0 / idx, "comment": f"first hit at rank {idx}"}
+    return {"key": "mrr", "score": 0.0, "comment": "no hit in retrieved"}
+
+
+class _ContextRelevanceJudgement(BaseModel):
+    relevant_count: int = Field(
+        description="Počet retrieved produktů, které jsou TOPICKY relevantní k dotazu."
+    )
+    total: int = Field(description="Celkový počet retrieved produktů, které jsi posuzoval.")
+    reasoning: str = Field(description="Krátké zdůvodnění česky.")
+
+
+def context_relevance(run: Any, example: Any) -> dict[str, Any]:
+    """LLM-judge: kolik z retrieved produktů je topicky relevantních k dotazu.
+
+    Užitečné, když `relevant_ids` v referenci nemáš (real-world dotazy) — ale i
+    při ground-truth datasetu doplní pohled „retrieval vrátil sice správné věci,
+    ale s 50% šumem."
+    """
+    outputs = getattr(run, "outputs", None) or {}
+    retrieved = outputs.get("retrieved") or []
+    if not retrieved:
+        return {"key": "context_relevance", "score": 0, "comment": "empty retrieval"}
+
+    query = example.inputs.get("query", "")
+    items_text = "\n".join(
+        f"- {p.get('id')}: {p.get('name')} [{p.get('category', '?')}]" for p in retrieved
+    )
+    judge = ChatOpenAI(model=_JUDGE_MODEL, temperature=0).with_structured_output(
+        _ContextRelevanceJudgement
+    )
+    prompt = (
+        "Posuzuješ kvalitu vyhledávání v katalogu e-shopu. Pro každý retrieved "
+        "produkt rozhodni, jestli je TOPICKY relevantní k dotazu.\n\n"
+        "Relevantní = produkt by uživatel rozumně očekával jako odpověď na svůj dotaz.\n"
+        "Nerelevantní = úplně jiná kategorie / brand / typ.\n\n"
+        f"Dotaz uživatele: {query}\n\n"
+        f"Retrieved produkty (top-{len(retrieved)}):\n{items_text}\n\n"
+        "Vrať `relevant_count` (kolik je relevantních) a `total` (kolik jsi posuzoval)."
+    )
+    result = judge.invoke(prompt)
+    score = (result.relevant_count / result.total) if result.total else 0.0
+    return {
+        "key": "context_relevance",
+        "score": score,
+        "comment": f"{result.relevant_count}/{result.total} | {result.reasoning}",
+    }
+
+
+RETRIEVAL_EVALUATORS = [recall_at_k, mrr, context_relevance]

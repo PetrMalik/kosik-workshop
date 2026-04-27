@@ -403,8 +403,7 @@ def seed_retrieval_dataset(client: Client | None = None, replace: bool = False) 
     """
     client = client or Client()
     description = (
-        "Retrieval golden set for the Košík catalog search "
-        "(query → expected product ids in top-k)."
+        "Retrieval golden set for the Košík catalog search (query → expected product ids in top-k)."
     )
 
     existing = next(
@@ -435,9 +434,7 @@ def seed_retrieval_dataset(client: Client | None = None, replace: bool = False) 
     existing_queries = {
         ex.inputs.get("query") for ex in client.list_examples(dataset_id=dataset.id)
     }
-    to_create = [
-        ex for ex in RETRIEVAL_EXAMPLES if ex["inputs"]["query"] not in existing_queries
-    ]
+    to_create = [ex for ex in RETRIEVAL_EXAMPLES if ex["inputs"]["query"] not in existing_queries]
     if to_create:
         client.create_examples(
             inputs=[ex["inputs"] for ex in to_create],

@@ -14,9 +14,13 @@ on:
   workflow_dispatch:
     inputs:
       threshold:
-        description: 'Min score per evaluator'
+        description: 'Min score per evaluator (E2E)'
         required: false
         default: '0.8'
+      retrieval_threshold:
+        description: 'Min score per evaluator (retrieval/RAG)'
+        required: false
+        default: '0.5'
 
 permissions:
   contents: read
@@ -65,6 +69,7 @@ jobs:
         run: |
           uv run python scripts/ci_eval_gate.py \
             --threshold "${{ inputs.threshold || '0.8' }}" \
+            --retrieval-threshold "${{ inputs.retrieval_threshold || '0.5' }}" \
             --report-file eval_report.md
 
       - name: Find existing eval comment
@@ -74,7 +79,7 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
-          body-includes: 'Eval Gate — `kosik-eval-golden`'
+          body-includes: '🤖 Eval Gate'
 
       - name: Post / update PR comment
         if: github.event_name == 'pull_request'

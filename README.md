@@ -42,7 +42,8 @@ git clone <repo-url> kosik-workshop
 cd kosik-workshop
 
 # Installs Python 3.12 if needed and creates .venv with all dependencies
-uv sync --all-groups
+# (the `dev` and `notebook` groups are installed by default)
+uv sync
 ```
 
 Register the Jupyter kernel once so the notebooks can find your env:

@@ -16,6 +16,9 @@ dependencies = [
     "langgraph>=1.1.9",
 ]
 
+[tool.uv]
+default-groups = ["dev", "notebook"]
+
 [dependency-groups]
 dev = [
     "ruff>=0.6",

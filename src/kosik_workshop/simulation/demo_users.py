@@ -4,11 +4,9 @@ Small enough to fit on one slide, varied enough to populate per-user filters
 in LangSmith dashboards. Each user has a stable id (used as `metadata.user_id`)
 so dashboards can filter per-person across scenarios.
 
-Note: tool-level allergen handling currently reads `DEFAULT_USER` from
-`kosik_workshop.user_prefs` — these profiles are used for analytics/labeling
-and to drive query selection (e.g. allergen-aware queries pick allergic users),
-not to gate tool behavior. A follow-up refactor would thread `user_id` from
-RunnableConfig into the tools.
+Tools read per-run allergens from `RunnableConfig` (`configurable.user_allergens`),
+so parallel invocations are isolated. The simulator (`simulation/runner.py`)
+threads each user's allergens into the config on every `agent.invoke`.
 """
 
 from __future__ import annotations

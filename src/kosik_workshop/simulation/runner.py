@@ -121,7 +121,10 @@ def run_scenario(
 
         collector = RunCollectorCallbackHandler()
         config = {
-            "configurable": {"thread_id": thread_id},
+            "configurable": {
+                "thread_id": thread_id,
+                "user_allergens": list(user.allergens),
+            },
             "metadata": {
                 "thread_id": thread_id,
                 "session_id": thread_id,

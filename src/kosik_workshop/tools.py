@@ -5,10 +5,31 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
+from langchain_core.runnables import RunnableConfig
 from langchain_core.tools import tool
 
 from kosik_workshop.catalog.schema import Allergen
 from kosik_workshop.user_prefs import DEFAULT_USER
+
+USER_ALLERGENS_CONFIG_KEY = "user_allergens"
+
+
+def _resolve_user_allergens(config: RunnableConfig | None) -> list[str]:
+    """Vrátí alergeny uživatele pro aktuální invocation.
+
+    Priorita:
+      1. `config["configurable"]["user_allergens"]` — produkční path (simulátor,
+         eval, vícevláknové runs). Každý invoke má vlastní isolovaný kontext.
+      2. `DEFAULT_USER.allergens` — workshop fallback pro `tool.invoke({})`
+         z notebooků, kde žádný config není k dispozici.
+    """
+    if config is not None:
+        configurable = config.get("configurable") or {}
+        injected = configurable.get(USER_ALLERGENS_CONFIG_KEY)
+        if injected is not None:
+            return [a if isinstance(a, str) else a.value for a in injected]
+    return [a.value for a in DEFAULT_USER.allergens]
+
 
 ROOT = Path(__file__).resolve().parents[2]
 PRODUCTS_JSON = ROOT / "data" / "products.json"
@@ -117,13 +138,16 @@ def get_product_details(product_id: str) -> dict[str, Any]:
 def check_allergens(
     product_id: str,
     user_allergens: list[str] | None = None,
+    config: RunnableConfig = None,  # type: ignore[assignment]
 ) -> dict[str, Any]:
     """Zkontroluje, zda je produkt bezpečný vzhledem k alergenům uživatele.
 
     Args:
         product_id: Slug produktu.
         user_allergens: Seznam alergenů uživatele (názvy jako "mléko", "lepek").
-            Pokud None, použije se default z `DEFAULT_USER` (prázdný seznam).
+            Pokud None, převezme se z `RunnableConfig` (klíč
+            `configurable.user_allergens`); pokud ani tam není, použije se
+            `DEFAULT_USER.allergens`.
 
     Returns:
         {
@@ -140,7 +164,7 @@ def check_allergens(
         return {"error": "not_found", "product_id": product_id}
 
     if user_allergens is None:
-        effective_user = [a.value for a in DEFAULT_USER.allergens]
+        effective_user = _resolve_user_allergens(config)
     else:
         valid = {a.value for a in Allergen}
         unknown = [a for a in user_allergens if a not in valid]
@@ -162,20 +186,29 @@ def check_allergens(
 
 
 @tool
-def user_allergens() -> list[str]:
-    """Vrátí aktuální seznam alergenů výchozího uživatele.
+def user_allergens(config: RunnableConfig = None) -> list[str]:  # type: ignore[assignment]
+    """Vrátí aktuální seznam alergenů uživatele.
+
+    Čte z `RunnableConfig` (`configurable.user_allergens`); pokud nic,
+    fallbackuje na `DEFAULT_USER.allergens` (workshop default).
 
     Returns:
         Seznam názvů alergenů (prázdný, pokud uživatel nemá žádné).
     """
-    return [a.value for a in DEFAULT_USER.allergens]
+    return _resolve_user_allergens(config)
 
 
 ALL_TOOLS = [search_products, get_product_details, check_allergens, user_allergens]
 
 
 def set_default_user_allergens(allergens: list[Allergen | str]) -> None:
-    """Helper pro notebooky: přepíše DEFAULT_USER.allergens bez perzistence."""
+    """Workshop helper: přepíše `DEFAULT_USER.allergens` bez perzistence.
+
+    Slouží jen pro single-thread notebookové scénáře (`tool.invoke({})` bez
+    `RunnableConfig`). V produkčním / paralelním kódu (simulátor, eval,
+    A/B runs) **NEPOUŽÍVAT** — předávejte alergeny přes
+    `config={"configurable": {"user_allergens": [...]}}` místo mutace globálu.
+    """
     normalized: list[Allergen] = []
     for a in allergens:
         normalized.append(a if isinstance(a, Allergen) else Allergen(a))

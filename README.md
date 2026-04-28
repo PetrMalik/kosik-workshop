@@ -71,6 +71,7 @@ OPENAI_API_KEY=sk-...               # from platform.openai.com
 LANGSMITH_API_KEY=lsv2_pt_...       # from smith.langchain.com → Settings → API Keys
 LANGSMITH_TRACING=true              # leave on; this is what enables traces
 LANGSMITH_PROJECT=kosik-workshop    # any name — shows up in LangSmith UI
+LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com   # EU region — must match where you signed up
 
 # Use the dev tag of the prompt published on LangSmith Hub
 ENVIRONMENT=development
@@ -83,7 +84,13 @@ ENVIRONMENT=development
 
 ### Setting up LangSmith
 
-1. Sign up at <https://smith.langchain.com/>.
+> **Region matters.** This repo defaults to the **EU** region
+> (`eu.smith.langchain.com`). If you sign up on the US instance
+> (`smith.langchain.com`) instead, change `LANGSMITH_ENDPOINT` in `.env` to
+> `https://api.smith.langchain.com` — otherwise you will get `403 Forbidden`
+> on the first trace.
+
+1. Sign up at <https://eu.smith.langchain.com/> (EU) or <https://smith.langchain.com/> (US).
 2. Create a **personal workspace** (free tier).
 3. Go to **Settings → API Keys → Create API Key**, copy it into `LANGSMITH_API_KEY`.
 4. The first time you run any notebook or script, a project named `kosik-workshop`

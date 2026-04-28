@@ -131,7 +131,8 @@ data/chroma/
 You can verify the index works with:
 
 ```bash
-uv run python -c "from kosik_workshop.catalog.store import load_chroma_index; \
+uv run python -c "from kosik_workshop.config import load_env; load_env(); \
+from kosik_workshop.catalog.store import load_chroma_index; \
 print(load_chroma_index().similarity_search('mléko', k=3))"
 ```
 

@@ -74,11 +74,34 @@ Druhý nejdůležitější blok.
 - **Failure analysis společně:** otevřeme 2–3 příklady, co propadly, diskutujeme proč
 - Rámec: **co se dá měřit kódem, měř kódem; LLM-judge použij jen tam, kde to jinak nejde**
 
+### Zmínka: `@pytest.mark.langsmith`
+
+LangSmith má i pytest integraci. Hodí se, když má každý test **jinou** kontrolu nebo chceš binární asserty místo skóre - typicky **regresní testy** z produkčních incidentů.
+
+```python
+import pytest
+from langsmith import testing as t
+
+@pytest.mark.langsmith
+def test_regression_allergen_lactose():
+    q = "Mám alergii na laktózu, doporuč mléko"
+    t.log_inputs({"question": q})
+    answer = run_agent(q)
+    t.log_outputs({"answer": answer})
+    t.log_reference_outputs({"must_contain": "laktóz"})
+    t.log_feedback(key="allergen_flagged", score=int("laktóz" in answer.lower()))
+    assert "laktóz" in answer.lower()
+```
+
+Spuštění: `pytest --langsmith-output tests/`. Každý soubor = dataset, každý test = example, každý běh = experiment.
+
+**Kdy co volit:** `evaluate()` + golden dataset pro homogenní eval (náš případ — 5 evaluátorů × 13 examples). `@pytest.mark.langsmith` pro per-test custom logiku nebo když už máš pytest pipeline a chceš tam vrazit regresní suite.
+
 ---
 
 # Část 2 — Volitelné moduly
 
-## Modul A: Retrieval (RAG) eval — *prioritní pro většinu skupin*
+## Modul A: Retrieval (RAG) eval — *prioritní pro většinu skupin*  — *notebook `07_rag_eval`*
 
 - Framing: end-to-end eval ti při failu nepoví, jestli selhalo retrieval nebo generation. RAG eval rozkládá agenta na **retrieval** a **generation** vrstvu.
 - Tři failure módy: missing retrieval, špatné pořadí, šum v top-k

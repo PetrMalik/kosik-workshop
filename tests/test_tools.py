@@ -103,3 +103,33 @@ def test_user_allergens_reflects_default_user():
     set_default_user_allergens([Allergen.MILK, Allergen.GLUTEN])
     result = user_allergens.invoke({})
     assert sorted(result) == ["lepek", "mléko"]
+
+
+def test_check_allergens_reads_user_from_config():
+    # DEFAULT_USER prázdný; alergeny přijdou jen z config injection.
+    config = {"configurable": {"user_allergens": ["lepek"]}}
+    result = check_allergens.invoke({"product_id": "test-chleb-500-g"}, config=config)
+    assert result["safe"] is False
+    assert result["conflicts"] == ["lepek"]
+
+
+def test_user_allergens_reads_from_config():
+    config = {"configurable": {"user_allergens": ["mléko", "lepek"]}}
+    result = user_allergens.invoke({}, config=config)
+    assert sorted(result) == ["lepek", "mléko"]
+
+
+def test_check_allergens_explicit_arg_overrides_config():
+    # Explicitní user_allergens parametr má přednost před config injection.
+    config = {"configurable": {"user_allergens": ["lepek"]}}
+    result = check_allergens.invoke(
+        {"product_id": "test-chleb-500-g", "user_allergens": []},
+        config=config,
+    )
+    assert result["safe"] is True
+
+
+def test_check_allergens_invalid_allergens_returned():
+    result = check_allergens.invoke({"product_id": "test-chleb-500-g", "user_allergens": ["xyz"]})
+    assert result["error"] == "invalid_allergens"
+    assert "xyz" in result["unknown"]

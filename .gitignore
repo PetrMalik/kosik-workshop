@@ -42,3 +42,6 @@ data/chroma/
 
 # LangGraph local runtime state
 .langgraph_api/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

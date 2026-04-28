@@ -36,7 +36,6 @@ První bod každé sekce je „check kernelu / tracingu" — nikdo nepojede dál
 
 - Ověření, že každému jede kernel, importy, `.env` se načítá
 - První `ChatOpenAI` volání → ukázka, že trace se objeví v LangSmith UI
-- **Záchytný bod:** kdo tady neuvidí trace, dál nepojede — řešíme hned
 
 ## Tools playground — *notebook `01_tools_playground`*
 

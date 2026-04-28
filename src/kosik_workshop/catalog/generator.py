@@ -9,12 +9,13 @@ from openai import AsyncOpenAI
 
 from kosik_workshop.catalog.schema import Product, ProductBatch
 from kosik_workshop.catalog.taxonomy import TAXONOMY, CategoryMeta
+from kosik_workshop.config import CATALOG_BATCH_SIZE, CATALOG_MODEL, CATALOG_TEMPERATURE
 
 log = logging.getLogger(__name__)
 
-MODEL = "gpt-4o-mini"
-TEMPERATURE = 0.8
-BATCH_SIZE = 12
+MODEL = CATALOG_MODEL
+TEMPERATURE = CATALOG_TEMPERATURE
+BATCH_SIZE = CATALOG_BATCH_SIZE
 
 
 SYSTEM_PROMPT = """Jsi asistent, který generuje realistická testovací data pro český online
@@ -60,8 +61,8 @@ async def generate_batch(
             ],
             response_format=ProductBatch,
         )
-    except Exception as e:
-        log.warning("batch failed for %s (n=%d): %s", category, n, e)
+    except Exception:
+        log.exception("batch failed for %s (n=%d)", category, n)
         return []
 
     parsed = response.choices[0].message.parsed

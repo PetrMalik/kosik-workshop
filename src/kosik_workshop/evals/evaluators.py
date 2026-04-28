@@ -21,6 +21,8 @@ from langchain_core.messages import AIMessage, ToolMessage
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
+from kosik_workshop.config import JUDGE_MODEL as _JUDGE_MODEL
+
 # ---------------------------------------------------------------------------
 # Helpers — extract structured info from a run's message list
 # ---------------------------------------------------------------------------
@@ -145,9 +147,6 @@ def cites_product_id(run: Any, example: Any) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 # LLM-as-judge evaluators
 # ---------------------------------------------------------------------------
-
-
-_JUDGE_MODEL = "gpt-4o-mini"
 
 
 class _AllergenJudgement(BaseModel):

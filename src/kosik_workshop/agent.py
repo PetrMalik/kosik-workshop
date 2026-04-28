@@ -23,8 +23,29 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
+from kosik_workshop.config import AGENT_MODEL, AGENT_TEMPERATURE
 from kosik_workshop.prompts.loader import load_kosik_prompt
 from kosik_workshop.tools import ALL_TOOLS
+
+
+def _extract_system_template(prompt: object) -> str:
+    """Vytáhne system prompt template z LangSmith ChatPromptTemplate.
+
+    LangSmith hub vrací `ChatPromptTemplate` se seznamem `messages`. System
+    template je první zpráva s neprázdným `prompt.template`. Při nečekané
+    struktuře vyhoď srozumitelnou chybu místo `StopIteration`.
+    """
+    messages = getattr(prompt, "messages", None)
+    if not messages:
+        raise TypeError(f"Prompt nemá atribut `messages` nebo je prázdný: {type(prompt).__name__}")
+    for msg in messages:
+        inner = getattr(msg, "prompt", None)
+        template = getattr(inner, "template", None) if inner is not None else None
+        if isinstance(template, str) and template.strip():
+            return template
+    raise TypeError(
+        "V LangSmith promptu nebyla nalezena žádná zpráva s neprázdným `prompt.template`."
+    )
 
 
 class AgentState(TypedDict):
@@ -38,8 +59,8 @@ class AgentState(TypedDict):
 
 
 def build_agent(
-    model: str = "gpt-4o-mini",
-    temperature: float = 0.0,
+    model: str = AGENT_MODEL,
+    temperature: float = AGENT_TEMPERATURE,
     checkpointer: BaseCheckpointSaver | None = None,
     system_text: str | None = None,
 ):
@@ -55,11 +76,7 @@ def build_agent(
     """
     if system_text is None:
         prompt = load_kosik_prompt()
-        system_text = next(
-            msg.prompt.template
-            for msg in prompt.messages
-            if getattr(msg, "prompt", None) and getattr(msg.prompt, "template", None)
-        )
+        system_text = _extract_system_template(prompt)
     system_message = SystemMessage(content=system_text)
     llm = ChatOpenAI(model=model, temperature=temperature).bind_tools(ALL_TOOLS)
 

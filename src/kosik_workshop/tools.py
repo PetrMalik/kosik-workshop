@@ -139,9 +139,18 @@ def check_allergens(
     if product is None:
         return {"error": "not_found", "product_id": product_id}
 
-    effective_user = (
-        user_allergens if user_allergens is not None else [a.value for a in DEFAULT_USER.allergens]
-    )
+    if user_allergens is None:
+        effective_user = [a.value for a in DEFAULT_USER.allergens]
+    else:
+        valid = {a.value for a in Allergen}
+        unknown = [a for a in user_allergens if a not in valid]
+        if unknown:
+            return {
+                "error": "invalid_allergens",
+                "unknown": unknown,
+                "allowed": sorted(valid),
+            }
+        effective_user = list(user_allergens)
     product_allergens: list[str] = list(product.get("allergens", []))
     conflicts = sorted(set(product_allergens) & set(effective_user))
     return {

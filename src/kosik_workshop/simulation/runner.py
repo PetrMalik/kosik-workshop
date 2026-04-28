@@ -11,6 +11,7 @@ Two scenarios:
 
 from __future__ import annotations
 
+import logging
 import time
 import uuid
 from collections.abc import Iterable
@@ -23,6 +24,8 @@ from langsmith import Client
 from kosik_workshop.agent import build_agent
 from kosik_workshop.simulation.demo_queries import DEMO_QUERIES, DemoQuery
 from kosik_workshop.simulation.demo_users import by_id
+
+log = logging.getLogger(__name__)
 
 
 @dataclass
@@ -148,6 +151,10 @@ def run_scenario(
             if not isinstance(answer, str):
                 answer = str(answer)
         except Exception as exc:  # noqa: BLE001
+            # Demo simulator nesmí spadnout uprostřed runu — logujeme plný
+            # traceback a pokračujeme. Heuristic evaluator dostane "[error] ..."
+            # a označí run jako neúspěšný, takže výpadek je v dashboardu vidět.
+            log.exception("agent invoke failed for query %r", query.text)
             answer = f"[error] {exc}"
 
         score, comment = _heuristic_quality(query, answer)
@@ -167,6 +174,7 @@ def run_scenario(
                     comment=comment,
                 )
             except Exception as exc:  # noqa: BLE001
+                log.warning("feedback create failed for run %s: %s", root_run_id, exc)
                 if print_progress:
                     print(f"  [feedback skipped: {exc}]")
 

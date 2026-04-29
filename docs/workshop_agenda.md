@@ -60,6 +60,19 @@ Klíčový blok první půlky.
 - Tour po LangSmith UI: filtry podle `scenario:*` tagu, latence, chyby, token cost
 - Diskuse: co byste chtěli vidět na vlastním produkčním dashboardu? (latence p95, error rate, cost per session…)
 
+## Online evaluator — *live demo v LangSmith UI*
+
+Most mezi tracingem a offline evalem: ukazujeme, že eval neběží jen v CI, ale i **kontinuálně na produkčních traces**.
+
+- V projektu už nakonfigurovaný `Hallucination` LLM-as-judge evaluator (feedback klíč `hallucination`) — běží automaticky na sampled traces v `kosik-workshop-dev`
+- Tour po UI: **Evaluators tab** → sampling rate, judge prompt, filtr (na které traces se aplikuje), cost guard
+- Live: traces z předchozího `run_demo.py` už mají `hallucination` skóre → filtr `hallucination=0` v UI → otevřít konkrétní trace, ukázat co judge zachytil
+- **Klíčový framing — dvě komplementární vrstvy:**
+  - **Offline eval (golden dataset, CI gate)** chrání před regresemi z PR — řízené, deterministické vstupy
+  - **Online eval (tento)** chrání před driftem v produkci — model provider mění snapshot, uživatelé nosí nové dotazy, retrieval se zhoršuje s rostoucím katalogem
+- Trade-off: online evals jsou drahé (každá trace × LLM judge call) a nedeterministické. Proto sampling rate + filtr na podezřelé traces (low confidence, allergen mention bez flagu, atd.). Pro 100% pokrytí slouží offline golden dataset.
+- **Lesson learned (vlastní zkušenost):** první iteraci `Hallucination` jsem zapojil s default LangSmith templatem v angličtině. Skóre vypadalo „příliš čistě" — drtivá většina traces 0.00. Důvod: anglický judge × česká data = slabší signál + bias k bezpečnému „no hallucination". Fix: klonovat template, prompt přepsat do češtiny, přidat instrukci, ať judge porovnává s tool výstupy v messages (ne jen plausibility check). **Klíčový princip: online evaluator je třeba kalibrovat proti malému lidskému datasetu — slepě mu nevěřte.** Skript `eval_human_agreement.py` měří agreement (procentní shoda + Cohen's kappa) mezi judgem a anotátorem.
+
 ## End-to-end evaluation — *notebook `03_evals`*
 
 Druhý nejdůležitější blok.
@@ -112,6 +125,10 @@ Spuštění: `pytest --langsmith-output tests/`. Každý soubor = dataset, každ
 - Hands-on: druhý dataset `kosik-retrieval-golden` (12 příkladů), spuštění retrieval evalu přímo proti `search_products` (bez agenta)
 - **A-ha moment:** vedle sebe E2E eval a retrieval eval ze stejného PR. Záměrně rozbijeme retrieval (zhorší se search query) → vidíme, kde je problém. Pak rozbijeme prompt → vidíme, že retrieval zůstává OK, ale E2E padá.
 - Diskuse: u reálného katalogu (1M+ SKUs) je retrieval typicky 90 % problému. Co byste ladili? Embedding model? Re-ranker? Hybridní BM25 + vector?
+- **Produkční roadmapa** vanilla dense retrieval (co máme) je 2026 podprůměr. Produkční baseline pro e-shop je:
+  1. **Hybrid search** — BM25 (přesné názvy/slugy) + dense (sémantika) slité přes Reciprocal Rank Fusion. Řeší dotazy typu *„Kofola 0.5"*, kde čistě dense propustí přesný keyword match.
+  2. **Cross-encoder reranker** (Cohere Rerank v3 nebo open-source `bge-reranker-v2-m3`) — dvoufázový retrieval: hybrid vytáhne top-30, reranker přerovná podle skutečné relevance, ber top-5. Typicky **+10–17 pp Recall@5** oproti vanilla dense.
+  3. **Měření je zdarma** — stejný `kosik-retrieval-golden` dataset, jen jiná varianta `search_products`. Compare view ukáže delta okamžitě.
 
 ## Modul B: PII redakce a GDPR — *notebook `04_pii_redaction`*
 
